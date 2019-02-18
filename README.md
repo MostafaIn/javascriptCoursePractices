@@ -4,7 +4,7 @@ this is the Intro lectures for javascript on 18feb2019
 
 ## Demo
 
-[javascriptLectures](https://mostafain.github.io/javascriptCoursePractices/.)
+[javascriptLectures](https://mostafain.github.io/javascriptCoursePractices/javascriptIndex.html)
 
 ## Technologies
 
