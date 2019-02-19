@@ -4,7 +4,11 @@ this is the Intro lectures for javascript on 18feb2019
 
 ## Demo
 
-[javascriptLectures](https://mostafain.github.io/javascriptCoursePractices/javascriptIndex.html)
+[javascriptLectures](https://mostafain.github.io/javascriptCoursePractices/HTML/javascriptIndex.html)
+
+[EXERCISES](https://mostafain.github.io/javascriptCoursePractices/HTML/ExIndex.html)
+
+[my own javascript practice :)](https://mostafain.github.io/javascriptCoursePractices/HTML/myIndex.html)
 
 ## Technologies
 
