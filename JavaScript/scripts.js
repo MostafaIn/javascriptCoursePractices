@@ -127,3 +127,23 @@ var school = "Integrify Academy";
 console.log(school.includes("Academy"));
 console.log(school.includes("Academies"));
 console.log(typeof school);
+//////////////////////////////////////////////
+// 19feb2019
+console.log('today is the second session of practice.');
+// something about forloop. 
+for(let i=0;i<10; i++){
+   console.log(i);
+ }
+ for(let i=0;; i++){
+   console.log('loop is : ' + i);
+   if(i>5)
+   break;
+ };
+ // Nested loop
+ for(let y=0; y<2; y++)
+  for(let x=0;x<2;x++)
+  console.log(y,x);
+
+  for(let f=0; f<5; f++){
+    console.log("me");
+  }
