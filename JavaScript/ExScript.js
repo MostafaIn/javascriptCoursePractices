@@ -114,3 +114,187 @@ operandOne--;
 operandTwo--;
 operandTwo--;
 console.log("4-- =>" + operandOne, " and 3-- =>" + operandTwo);
+
+////////// 6. Comparison Operator
+// Boolean value is either true or false. Any comparison return a boolean either true or false.
+// Use all the following comparison operators to compare the following values: >, < >=, <=, !=, !==,===.
+// Which are true or which are false ?
+
+var value1 = 4;
+var value2 = 3;
+// a. 4 > 3
+if (value1 > value2) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// b. 4 >= 3
+if (value1 >= value2) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// c. 4 < 3
+if (value1 < value2) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// d. 4 <=3
+if (value1 <= value2) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// e. 4 == 4
+if (value1 == value1) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// f. 4 === 4
+if (value1 === value1) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// g. 4 != 4
+if (value1 != value1) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// h. 4!== 4
+if (value1 !== value1) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// i. 4!=’4’
+if (4 != "4") {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// j. 4==’4’
+if (4 == "4") {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// k. 4 ===’4’
+if (4 === "4") {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+
+////////// 7. Logical Operator  &&, || and ! are JavaScript logical operators.
+// Which are true or which are false ?
+// a. 4 > 3 && 10 < 12
+if (4 > 3 && 10 < 12) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// b. 4 > 3 && 10 > 12
+if (4 > 3 && 10 > 12) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// c. 4 > 3 || 10 < 12
+if (4 > 3 || 10 < 12) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// d. 4 > 3 || 10 > 12
+if (4 > 3 || 10 > 12) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// e. !(4 > 3)
+if (!(4 > 3)) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// f. !(4 < 3)
+if (!(4 < 3)) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// j. !(false)
+if (!false) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// h. !(4 > 3 && 10 < 12)
+if (!(4 > 3 && 10 < 12)) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// i. !(4 > 3 && 10 > 12)
+if (!(4 > 3 && 10 > 12)) {
+  console.log("TRUE.");
+} else {
+  console.log("FALSE.");
+}
+// j. !(4 ===’4’)
+// if (!(4 === ’4’)){
+//   console.log("TRUE.");
+// } else {
+//   console.log("FALSE.");
+// }
+
+////////// 8. Conditionals
+// Get user input using prompt(“Enter your age:”). If user is 18 or older ,
+// give feedback:You are old enough to drive but if not 18 give feedback to wait
+// for the years he supposed to wait for.
+/*var YourAge = prompt(" How old are you? ");
+if (YourAge >= 18) {
+  console.log("you are: " + YourAge + "\n You are old enough to drive. ");
+} else if (YourAge == 17) {
+  console.log(
+    "you are: " +
+      YourAge +
+      "\n You are left with " +
+      (18 - YourAge) +
+      " year to drive."
+  );
+} else {
+  console.log(
+    "you are: " +
+      YourAge +
+      "\n You are left with " +
+      (18 - YourAge) +
+      " years to drive."
+  );
+}*/
+
+/* Compare the values of myAge and yourAge using if … else. Based on the comparison log to console
+  who is older (me or you). Use prompt(“Enter your age:”) to get the age as input.*/
+var your_age = prompt("How old are you? ");
+var my_age = 34;
+if (your_age > my_age) {
+  console.log(
+    `I am ${my_age} years old, and you are ${your_age} years old SO you are ${your_age -
+      my_age} years older than me !`
+  );
+} else if (your_age < my_age) {
+  console.log(
+    `I am ${my_age} years old, and you are ${your_age} years old SO you are ${my_age -
+      your_age} years younger than me !`
+  );
+} else {
+  console.log(
+    `I am ${my_age} years old, and you are ${your_age} years old SO we are in the same age !`
+  );
+}
+
+////////// 9. Ternary Operator
