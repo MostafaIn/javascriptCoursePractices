@@ -1,10 +1,11 @@
-# javascriptCoursePractices
+# javascript Course Practices
 
-this is the Intro lectures for javascript on 18feb2019
+this is the Intro lectures and practices for javascript on 18feb2019
 
 ## Demo
 
 [javascriptLectures01](https://mostafain.github.io/javascriptCoursePractices/HTML/javascriptIndex.html)
+
 [javascriptLectures02](https://mostafain.github.io/javascriptCoursePractices/HTML/javascript2Index.html)
 
 [EXERCISES](https://mostafain.github.io/javascriptCoursePractices/HTML/ExIndex.html)
