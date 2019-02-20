@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS revision</title>
+  </head>
+
+  <body>
+    <h1>Welcome to javaScript</h1>
+    <button onclick="alert('I am here  :)')">Click me!</button>
+    <br /><br />
+    <script>
+      // document.write(' I enjoy to do javascript.');
+      console.log("i also enjoy of this .the most popular language in 2019");
+
+      var numOne = 3;
+      var numTwo = 4;
+      console.log(" 3 + 4 = " + numOne + numTwo);
+      var sub = numOne - numTwo;
+      console.log(" 3 - 4 = " + sub);
+      console.log(" 3 * 4 = " + numOne * numTwo);
+      console.log(" 3 / 4 = " + numOne / numTwo);
+      console.log(" 3 % 4 = " + (numOne % numTwo));
+
+      //   the boiling point of water is 100 oC,
+      //   Human body temperature is 37 oC,
+      //   the gravityof earth is 9.81 m/s2.
+      var boilingPoint = 100;
+      var bodyTemperature = 37;
+      var gravity = 9.81;
+      console.log(
+        " The boiling point is " +
+          boilingPoint +
+          " oC" +
+          ",\n Human body temperature is " +
+          bodyTemperature +
+          ",\n and the gravity of the earth is = " +
+          gravity +
+          "."
+      );
+      console.log(
+        `the boiling point of water is ${boilingPoint} oC, Human body temperature is ${bodyTemperature} oC, and the gravity of the earth is ${gravity}.`
+      );
+
+      /*
+       *** Comparison Operators ***
+       */
+
+      var houseNumber = "B12";
+      console.log(houseNumber);
+      console.log(typeof houseNumber);
+      console.log(typeof Number(houseNumber));
+
+      /*
+         *** Logical Operators ***
+         AND => && , OR => || , NOT => !()
+         */
+
+      console.log(4 > 3 && 5 < 3);
+      console.log(4 > 3 || 5 < 3);
+      console.log(!true);
+      console.log(true);
+
+      // Operator precedence
+
+      // Arays
+      console.log("this part talk about Aray/////////////////////////");
+
+      var items = ["item1", "item2", "item3", "item4"];
+      console.log(items);
+      console.log(items.length);
+      console.log(items[2]);
+      console.log(items.length - 1);
+
+      //
+      // var anyNum1 = prompt("Enter the first number: ");
+      // var anyNum2 = prompt("enter the second number:");
+      // if (anyNum1 > anyNum2) {
+      //   console.log(`the first number is  ${anyNum1} and the second number is ${anyNum2}
+      //    SO the first number is greater than second number. `);
+      // } else if (anyNum1 < anyNum2) {
+      //   console.log(`the first number is  ${anyNum1} and the second number is ${anyNum2}
+      //    SO the first number is smaller than second number. `);
+      // } else {
+      //   console.log(`the first number is  ${anyNum1} and the second number is ${anyNum2}
+      //    SO these two numbers are the same. `);
+      // }
+
+      //////////////
+      const webTechs = [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Redux",
+        "Node",
+        "MongoDB"
+      ];
+      const countries = [
+        "Albania",
+        "Bolivia",
+        "Canada",
+        "Denmark",
+        "Ethiopia",
+        "Finland",
+        "Germany",
+        "Hungary"
+      ];
+      const numbers = [0, 3.14, 9.81, 37, 98.6, 100];
+      const shoppingCart = [
+        "Milk",
+        "Mango",
+        "Tomato",
+        "Potato",
+        "Avocado",
+        "Meat",
+        "Eggs",
+        "Sugar"
+      ];
+      console.log(webTechs);
+      console.log(webTechs.length); // => to know the size of the array, which is 7
+      console.log(webTechs[0]); //--> HTML;
+      console.log(webTechs[webTechs.length - 1]); //--> MongoDB
+      console.log(countries);
+      console.log(numbers);
+      console.log(shoppingCart);
+
+      ////// SWITCH
+      // var inputDay = prompt("What is today?");
+      // var day = inputDay.toLowerCase();
+      // switch (day) {
+      //   case "Sunday":
+      //     console.log("today is Sunday.");
+      //     break;
+      //   case "Monday":
+      //     console.log("today is Monday.");
+      //     break;
+      //   case "Tuesday":
+      //     console.log("today is tuesday.");
+      //     break;
+      //   case "Wednesday":
+      //     console.log("today is Wednesday.");
+      //     break;
+      //   case "Thursday":
+      //     console.log("today is Thursday.");
+      //     break;
+      //   case "Friday":
+      //     console.log("today is Friday.");
+      //     break;
+      //   default:
+      //     console.log("today is Saturday");
+      //     break;
+      // }
+      /////////
+      for (var i = 0; i <= 100; i++) {
+        console.log(i);
+      }
+      console.log("******************");
+      for (var j = 100; j >= 0; j -= 10) {
+        console.log(j);
+      }
+      console.log("******************");
+      console.log("these are odd");
+      for (var n = 0; n <= 100; n += 2) {
+        console.log(n);
+      }
+      console.log("******************");
+      // console.log("these are even");
+      // for (var m = 0; m <= 100; m++) {
+      //   if (1 % 2 == 0) console.log(m);
+      // }
+
+      //// create a function to calculate the sum of two numbers.
+
+      function sumFunc() {
+        var num1 = 10;
+        var num2 = 12;
+        var sum = num1 + num2;
+        console.log(`${num1} + ${num2} = ${sum}`);
+        return sum;
+      }
+      sumFunc();
+      // another way for declaring a function
+      function sumFun(num1, num2) {
+        var sum = num1 + num2;
+        console.log(sum);
+        return sum;
+      }
+      sumFun(31, 5);
+      sumFun(34, 54);
+      sumFun(67, 98);
+
+      /////Ternary Operator
+      var numberT = 4;
+      console.log(
+        numberT > 5 ? "this number in greater than 5." : "this is less than 5."
+      );
+    </script>
+  </body>
+</html>
