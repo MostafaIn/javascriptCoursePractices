@@ -1,4 +1,6 @@
 /////////// Exercise: 1
+
+console.log("********** 1. VARIABLE **********");
 /////////// 1. Variable
 // a. Declare variables to store your first name, last name,  marital status, country and age in multiple lines
 var firstName = "Mostafa";
@@ -21,12 +23,14 @@ var yourAge = 28;
 console.log("I am " + myAge + " yearsold.");
 console.log("You are " + yourAge + " yearsold.");
 
+console.log("********** 2. DATA TYPE **********");
 /////////// 2. Data Types
 /*String, number, boolean, null, undefined and symbol(ES6) are JavaScript primitive data types.
 The JavaScript typeof operator uses to check different data types.Check the data type of each variables from question number 1. */
 console.log(typeof firstName);
 console.log(typeof age);
 
+console.log("********** 3.STRING **********");
 ////////// 3. String
 // Declare a variable name company and assign it to an initial value “Integrify Academy”.
 var company = "      Integrify Academy";
@@ -72,6 +76,7 @@ console.log("Integrify".concat("Academy"));
 // t. Use repeat() method to print Integrify Academy 5 times
 console.log(company.repeat(5));
 
+console.log("********** 4. BOOLEAN **********");
 ////////// 4. Boolean => Boolean value is either true or false.
 // a. Write three JavaScript statement which provide truthy value.
 // var state1 = prompt("what is your name?");
@@ -86,6 +91,7 @@ console.log(company.repeat(5));
 //   console.log("you are not the true person.");
 // }
 
+console.log("********** 5. ARITHMETIC OPERATOR **********");
 ////////// 5. Arithmetic Operator
 // JavaScript arithmetic operators are addition(+), subtraction(-), multiplication(*), division(/), modulus(%), increment(++) and decrement(--).
 let operandOne = 4;
@@ -115,6 +121,7 @@ operandTwo--;
 operandTwo--;
 console.log("4-- =>" + operandOne, " and 3-- =>" + operandTwo);
 
+console.log("********** 6. COMPARISON OPERATOR **********");
 ////////// 6. Comparison Operator
 // Boolean value is either true or false. Any comparison return a boolean either true or false.
 // Use all the following comparison operators to compare the following values: >, < >=, <=, !=, !==,===.
@@ -189,6 +196,7 @@ if (4 === "4") {
   console.log("FALSE.");
 }
 
+console.log("********** 7. LOGICAL OPERATOR **********");
 ////////// 7. Logical Operator  &&, || and ! are JavaScript logical operators.
 // Which are true or which are false ?
 // a. 4 > 3 && 10 < 12
@@ -252,6 +260,7 @@ if (!(4 > 3 && 10 > 12)) {
 //   console.log("FALSE.");
 // }
 
+console.log("********** 8. CONDITIONALS **********");
 ////////// 8. Conditionals
 // Get user input using prompt(“Enter your age:”). If user is 18 or older ,
 // give feedback:You are old enough to drive but if not 18 give feedback to wait
@@ -279,7 +288,7 @@ if (YourAge >= 18) {
 
 /* Compare the values of myAge and yourAge using if … else. Based on the comparison log to console
   who is older (me or you). Use prompt(“Enter your age:”) to get the age as input.*/
-var your_age = prompt("How old are you? ");
+/*var your_age = prompt("How old are you? ");
 var my_age = 34;
 if (your_age > my_age) {
   console.log(
@@ -295,6 +304,212 @@ if (your_age > my_age) {
   console.log(
     `I am ${my_age} years old, and you are ${your_age} years old SO we are in the same age !`
   );
+}*/
+
+console.log("********** 9. TERNARY OPERATOR **********");
+////////// 9. Ternary Operator
+let a = prompt("please enter a number: ");
+let b = prompt("please enter another number: ");
+
+console.log(
+  a > b ? `the ${a} is greater than ${b}` : `the ${a} is less than ${b}.`
+);
+
+console.log("********** 10. ARRAY **********");
+////////// 10. Array
+/* Declare an array  variable name itCompanies and assign initial values 
+Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon. */
+// a. Print the array using console.log()
+var itCompanies = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon"
+];
+console.log(itCompanies);
+// b. Print the number of companies in the array
+console.log(`there are ${itCompanies.length} companies are listed here!`);
+
+// c. Print out each company
+console.log(itCompanies[1]);
+
+for (var i = 0; i < itCompanies.length; i++) {
+  console.log(i + 1 + " " + itCompanies[i]); // i+1 execute a number in front of each item.
+}
+console.log("  ***** now the items in uppercase. *****");
+// d. Change every company to uppercase and print them out
+// console.log(itCompanies.toUpperCase());
+
+// e. Print the array like a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
+console.log(itCompanies.toString() + " are big companies in the world.");
+// f. Sort the array using sort() method
+console.log(" sorted the items in accending order. => " + itCompanies.sort());
+// g. Reverse the array using reverse() method
+console.log(
+  " sorted the items in deccending order. => " + itCompanies.reverse()
+);
+
+console.log("********** 11. LOOP **********");
+////////// 11. Loop
+// a. Iterate 0 to 10 using for loop, do the same using while and do while loop.
+console.log("**** for loop ****");
+for (var i = 0; i <= 10; i++) {
+  console.log(i);
+}
+console.log("**** while loop ****");
+var j = 0;
+while (j <= 10) {
+  console.log(j);
+  j++;
+}
+console.log("**** do-while loop ****");
+var x = 0;
+do {
+  console.log(x);
+  x++;
+} while (x <= 10);
+
+// c. Iterate the array in question number 10 using a for loop and print out the items.
+for (var i = 0; i < itCompanies.length; i++) {
+  console.log(i + 1 + " " + itCompanies[i].toUpperCase()); // i+1 execute a number in front of each item.
+}
+/* d. Check if a certain company exists in the ITCompanies array. 
+If it exist return the company else return a company is not found. */
+console.log("*********************");
+var ITCompanies = [
+  "apple",
+  "ibm",
+  "microsoft",
+  "itengrify",
+  "Digia",
+  "moomi",
+  "lolo"
+];
+var certainCompany = prompt("Enter a popular company name here! ?");
+var firstItem = certainCompany.toLowerCase();
+
+for (var c = 0; c <= ITCompanies.length; c++) {
+  if (ITCompanies[c] === firstItem) {
+    console.log(firstItem + " is found in the list :)");
+    var found = true;
+    break;
+  }
+}
+if (!found) {
+  console.log(firstItem + " is not found in the list :(");
 }
 
-////////// 9. Ternary Operator
+// e. Filter out companies which have more than two ‘o’ without the filter method
+
+for (var o = 0; o <= ITCompanies.length; o++) {
+  if (ITCompanies[o].includes("oo")) {
+    console.log(ITCompanies[o] + " contain oo .");
+    break;
+  } else {
+    console.log('no item match with "oo" .');
+  }
+}
+
+// foreach loop
+console.log("********* forEach loop ********");
+var pN = ["mina", "sina", "han", "me", "te", "he"];
+pN.forEach(myFunc);
+function myFunc(item, index, array) {
+  console.log(index + 1, item);
+}
+
+console.log("********** 12. FUNCTION **********");
+
+////////// 12. Function
+// a. Declare a function fullName and it print out your full name.
+
+function myName(first_name, last_name) {
+  var full_name = first_name + last_name;
+  return full_name;
+}
+console.log(myName("mostafa ", "hazareh."));
+console.log(myName("Rohy ", "Dehqanzada."));
+console.log(myName("Niini ", "Jiiji"));
+
+/* b. Declare a function fullName and now it takes firstName, 
+lastName as a parameter and it returns your full name. */
+
+function my_name(fName, lName) {
+  var full_name = fName + lName;
+  return full_name;
+}
+console.log(my_name("Nicole ", "Kidman")); // call the function to concat the name and also it can
+console.log(my_name(10, 32)); // the + sign affect on the numbers and add these to gether.
+
+// c. Declare a function addNumbers and it takes three parameters and it returns sum.
+function addNumbers(num1, num2, num3) {
+  var sum = num1 + num2 + num3;
+  return sum;
+}
+var sumResult = addNumbers(12, 13, 34);
+var d = addNumbers(245, 23, 4);
+console.log(`12 + 13 + 34 = ${sumResult}`);
+console.log(`245 + 23 + 4 = ${d}`);
+console.log(
+  sumResult + " + " + d + " + 10" + " = " + addNumbers(sumResult, d, 10)
+);
+
+// d.  Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
+var cars = ["toyota", "mazda", "BMW", "benz", "nissan", "ford"];
+function printArray(cars) {
+  return cars.sort();
+}
+console.log(printArray(cars));
+
+// e. Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array(dont’ use method).
+function reverseArray(cars) {
+  return cars.reverse();
+}
+console.log(reverseArray(cars));
+// f.  Declare a function name capitalizeArray. It takes array as a parameter and it returns  the capitalized array.
+function capitalizeArray(cars) {
+  for (var i = 0; i < cars.length; i++) {
+    cars[i] = cars[i].toUpperCase();
+  }
+  // return cars;
+}
+capitalizeArray(cars);
+console.log(cars);
+// g. Declare a function name removeItem. It returns array after removing an item
+function removeItem(cars) {
+  return cars;
+}
+removeItem(cars.splice(0, 2));
+console.log(cars);
+
+// h. Declare a function name addItem. It returns array after adding an item
+function addItem(cars) {
+  // cars.push("frarry");
+  // cars.push("VolksWagon");
+  return cars;
+}
+addItem(cars.push("skuda"));
+addItem(cars.push("chevrolet"));
+console.log(cars);
+addItem(cars.push("tiida"));
+console.log(cars);
+
+// i. Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
+
+function sumOfNumbers(num1, num2, num3, num4, num5) {
+  var sum = num1 + num2 + num3 + num4 + num5;
+  return sum;
+}
+console.log(sumOfNumbers(12, 12, 26, 50, 12));
+
+// add all the items of an arry.
+var s = [12, 13, 26, 50, 102, 202, 33, 7, 22, 8, 61, 1].reduce(adds);
+function adds(a, b) {
+  return a + b;
+}
+console.log(s);
+
+// j. Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that - range.
