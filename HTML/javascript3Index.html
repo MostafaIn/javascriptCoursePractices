@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript03</title>
+  </head>
+  <body>
+    <h1>Welcome to JavaScript.</h1>
+    <h2>this is the third session of javacript tutorial.</h2>
+    <h5>25 FEB 2019.</h5>
+
+    <script>
+      const Body_Temperature = 37;
+      const Gravity = 9.0;
+
+      var PI = Math.PI;
+      console.log(Math.round(PI));
+      console.log(Math.floor(PI));
+      console.log(Math.sqrt(3));
+
+      function areaOfCircle(radius) {
+        var area = (Math.PI = radius * radius);
+        return area.toFixed(2);
+      }
+      console.log(areaOfCircle(12));
+      console.log(Number("5"));
+      console.log(Math.random() * 10 + 1);
+      console.log(Math.floor(Math.random() * 10 + 1));
+
+      function rgbColorGenerator() {
+        let red = Math.floor(Math.random() * 255);
+        let green = Math.floor(Math.random() * 255);
+        let blue = Math.floor(Math.random() * 255);
+
+        return `rgb(${red}, ${green}, ${blue})`;
+      }
+      console.log(rgbColorGenerator());
+
+      console.log("**********************************");
+
+      function varTest() {
+        let x = 1;
+        console.log(x);
+        if (true) {
+          let x = 2;
+          console.log(x);
+        }
+        console.log(x);
+      }
+      varTest();
+      console.log("**********************************");
+
+      for (var i = 0; i < 6; i++) {
+        console.log(i);
+      }
+      console.log("out of loop = " + i);
+
+      console.log("************** Array methods ********************");
+      const numbers = [2, 3, 5, 6, 8, 9];
+      const countries = ["Afghanistan", "Suomi", "Canada", "Pakistan", "viro"];
+      //Array methods push, pop, shift, unshift.
+      console.log(numbers);
+      numbers.push(11);
+      console.log(numbers);
+
+      let arr = [];
+      console.log(arr);
+      for (let i = 0; i < 10; i++) {
+        // arr.push(1);
+        arr[i] = i;
+        const random = Math.floor(Math.random() * 11); // push randomly the last item.
+        arr.push(random);
+      }
+      console.log(arr);
+
+      const name = ["mostafa", "john", "jack", "martha"];
+      console.log(name);
+      name.pop(); // remove the last item of the list.
+      console.log(name);
+      name.shift(); // remove the first item of the list.
+      console.log(name);
+      name.push("moomi"); // add an item to the end of list.
+      console.log(name);
+
+      console.log("************** more about functions ********************");
+      function fullName() {
+        let firstName = " Mostafa ";
+        let lastName = " Hazareh ";
+        // console.log(firstName + lastName);
+        return (fullName = firstName + lastName);
+      }
+      // fullName();
+      console.log(fullName());
+
+      function FullName(FirstName, LastName) {
+        return FirstName + LastName;
+      }
+      console.log(FullName("mostafa", " hazareh"));
+      console.log(FullName("jimme", " jacki"));
+
+      const sqr1 = function(n) {
+        console.log("this is me");
+        return n * n;
+        console.log("this is again me"); // this doesn't show because it is after the return in the function.
+      };
+      console.log(sqr1(4));
+
+      console.log("************** Array Functions ********************");
+      const full_name = (first_name, last_name) => firstName + " " + lastName;
+      // console.log(full_name());
+
+      const sqr2 = (n) => {
+        return n * n;
+      };
+      console.log(sqr2(6));
+
+      console.log("************** OBJECTS ********************");
+      //  const nameOfObject= {};
+      const person = {
+        firstName: " MOSTAFA ",
+        lastName: " HAZAREH ",
+        age: 34,
+        job: "junior DEVELOPER",
+        skills: ["HTML", "CSS", "JavaScript"],
+        married: true,
+        getPersonalInfo: function() {
+          return `I am ${this.firstName} ${this.lastName}`;
+        }
+      };
+      console.log(person);
+      console.log(person.getPersonalInfo());
+      ////////////////////////////////////////////////////////
+      const rectangle = {
+        length: 100,
+        width: 20,
+        getAreaOfRectangle: function() {
+          return this.length * this.width;
+        },
+        getSquareRectangle: function() {
+          return 2 * this.length * this.width;
+        }
+      };
+      console.log(rectangle);
+      console.log(
+        "this is the area of rectangle = " + rectangle.getAreaOfRectangle()
+      );
+      console.log(
+        "this is the square of rectangle = " + rectangle.getSquareRectangle()
+      );
+    </script>
+  </body>
+</html>

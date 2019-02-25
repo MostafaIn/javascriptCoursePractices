@@ -359,6 +359,9 @@ console.log("**** for loop ****");
 for (var i = 0; i <= 10; i++) {
   console.log(i);
 }
+for (var k = 10; k >= 0; k--) {
+  console.log(k);
+}
 console.log("**** while loop ****");
 var j = 0;
 while (j <= 10) {
@@ -512,4 +515,57 @@ function adds(a, b) {
 }
 console.log(s);
 
-// j. Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that - range.
+// j. & k. Declare a function name sumOfOdds & sumOf Evens. It takes a number parameter and it adds all the odd numbers in that - range.
+function sumOfNumbers() {
+  var someNum = [23, 34, 45, 56, 67, 78, 90, 43, 76, 8];
+  var OddsSum = 0;
+  var EvensSum = 0;
+  for (i = 0; i <= someNum.length - 1; i++) {
+    if (someNum[i] % 2 == 0) {
+      EvensSum = EvensSum + someNum[i];
+      console.log(someNum[i] + " is even.");
+    } else {
+      OddsSum = OddsSum + someNum[i];
+      console.log(someNum[i] + " is odd.");
+    }
+  }
+  return { SumofEvenNumbers: EvensSum, SumofOddNumbers: OddsSum };
+}
+console.log(sumOfNumbers());
+
+// 20. Declare a function name . It takes a number parameter and it counts number of evens and odds in the - number. output:
+console.log("*********************");
+function showSum(a, b, c, d, e, f) {
+  var sum = a + b + c + d + e + f;
+  return sum;
+}
+console.log(" the sum of 6 values = " + showSum(12, 2, 3, 4, 5, 60));
+console.log(" the sum of 6 values = " + showSum(13, 4, 13, 64, 5, 1));
+
+console.log("*********************");
+// this function define the numbers of the array is odd or even and show them in console.
+var someNos = [12, 7, 13, 34, 56, 7622, 1, 25, 37, 32, 58, 51];
+function showDiff() {
+  for (i = 0; i < someNos.length; i++) {
+    if (someNos[i] % 2 !== 0) {
+      console.log(someNos[i] + " is odd.");
+    } else {
+      console.log(someNos[i] + " is even.");
+    }
+  }
+}
+showDiff();
+console.log("*********************");
+function arrUnits() {
+  let allEvens = 0;
+  let allOdds = 0;
+  for (i = 0; i <= someNos.length - 1; i++) {
+    if (someNos[i] % 2 !== 0) {
+      allOdds += someNos[i];
+    } else {
+      allEvens += someNos[i];
+    }
+  }
+  return { allOdds, allEvens };
+}
+console.log(arrUnits());

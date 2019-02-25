@@ -8,6 +8,8 @@ this is the Intro lectures and practices for javascript on 18feb2019
 
 [javascriptLectures02](https://mostafain.github.io/javascriptCoursePractices/HTML/javascript2Index.html)
 
+[javascriptLectures03](https://mostafain.github.io/javascriptCoursePractices/HTML/javascript3Index.html)
+
 [EXERCISES](https://mostafain.github.io/javascriptCoursePractices/HTML/ExIndex.html)
 
 [my own javascript practice :)](https://mostafain.github.io/javascriptCoursePractices/HTML/myIndex.html)
