@@ -669,7 +669,24 @@ checkSeason("12");
 
 console.log(Date());
 
-// 15. Linear equation is calculated as follows: ax + b = c. Write a function which calculates value of a linear equation, solveLinEquation.
+// 15. Math.max returns its largest argument. Write a function findMax that takes three arguments and returns their maxiumum with out using Math.max method.
+function findMax(n1, n2, n3) {
+  var maximum;
+  if (n1 > n2 && n1 > n3) {
+    maximum = n1;
+  } else if (n2 > n1 && n2 > n3) {
+    maximum = n2;
+  } else {
+    maximum = n3;
+  }
+  return maximum;
+}
+console.log("the maximum number is = " + findMax(13, 12, 8));
+console.log("the maximum number is = " + findMax(13, 22, 8));
+console.log("the maximum number is = " + findMax(13, 22, 48));
+console.log("the maximum number is = " + findMax(-13, -22, -48));
+
+// 16. Linear equation is calculated as follows: ax + b = c. Write a function which calculates value of a linear equation, solveLinEquation.
 function solveLinEquation(a, b, c) {
   var x = (c - b) / a;
   return x;
@@ -678,13 +695,69 @@ console.log("X = " + solveLinEquation(5, 2, 22));
 console.log("X = " + solveLinEquation(4, 1, 13));
 console.log("X = " + solveLinEquation(8, 2, 18));
 
-// 16. Quadratic equation is calculated as follows: ax2 + bx + c = 0. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
+// 17. Quadratic equation is calculated as follows: ax2 + bx + c = 0. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
 
+// 18. Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
+function printArr(arr) {
+  for (let index = 0; index < arr.length; index++) {
+    // console.log(arr[index]);
+  }
+  console.log(`${arr}`);
+}
+printArr([23, 34, 24, 2, 45, 3]);
+printArr([4, 346, 35, 2]);
 
+// 19. Declare a function name swapValues. This function swaps value of x to y.
+function swapValues(x, y) {
+  console.log(`The value of x = ${x} and y = ${y}`);
+  var m = x;
+  x = y;
+  y = m;
+  return `BUT NOW the  x = ${x} and y = ${y}`;
+}
+console.log(swapValues(3, 6));
+console.log(swapValues(23, 67));
 
+// 20. Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (dont’ use method).
+function reverseArr(arr) {
+  let reverseArr = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    reverseArr.push(arr[i]);
+    console.log(`${arr[i]}`);
+  }
+  return reverseArr;
+}
+console.log(reverseArr([1, 2, 3, 4, 5]));
+console.log(reverseArr(["A", "B", "C", "D", "E"]));
+console.log(reverseArr(["I", "II", "III", "IV", "V", "VI"]));
 
+// 21.  Declare a function name capitalizeArray. It takes array as a parameter and it returns  the capitalized array.
+function capitalizeArray(carsArr) {
+  let arrCap = [];
+  for (var i = 0; i < carsArr.length; i++) {
+    arrCap.push(carsArr[i].toUpperCase());
+  }
+  return arrCap;
+}
+console.log(capitalizeArray(["toyota", "nissan", "mazda"]));
 
+// 22. Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
+function addItem(item) {
+  let items = [];
+  for (let i = 0; i <= items.length; i++) {
+    items.push(item[i]);
+    console.log(item[i]);
+  }
+  console.log(items);
 
+  return items;
+}
+addItem(["ONE"]);
+addItem(["TWO"]);
+addItem(["THREE"]);
+addItem(["FOUR"]);
+addItem(["FIVE"]);
+addItem([123]);
 
 // 11. Weight of a substance is calculated as follows: weight = mass x gravity. Write a function which calculates weight.
 function CalWeight(mass, gravity) {
@@ -707,15 +780,7 @@ function reverseArray(cars) {
   return cars.reverse();
 }
 console.log(reverseArray(cars));
-// f.  Declare a function name capitalizeArray. It takes array as a parameter and it returns  the capitalized array.
-function capitalizeArray(cars) {
-  for (var i = 0; i < cars.length; i++) {
-    cars[i] = cars[i].toUpperCase();
-  }
-  // return cars;
-}
-capitalizeArray(cars);
-console.log(cars);
+
 // g. Declare a function name removeItem. It returns array after removing an item
 function removeItem(cars) {
   return cars;
