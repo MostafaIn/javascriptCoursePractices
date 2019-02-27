@@ -1,4 +1,4 @@
-/////////// Exercise: 1
+/////////// Javascript Exercises
 
 console.log("********** 1. VARIABLE **********");
 /////////// 1. Variable
@@ -33,7 +33,7 @@ console.log(typeof age);
 console.log("********** 3.STRING **********");
 ////////// 3. String
 // Declare a variable name company and assign it to an initial value “Integrify Academy”.
-var company = "      Integrify Academy";
+var company = "    Integrify Academy";
 // a. Print the string  on the browser console using console.log()
 console.log(company);
 // b. Print the length of the string  on the browser console using console.log()
@@ -43,7 +43,9 @@ console.log(company.toUpperCase());
 // d. Change all the string to small letters using toLowerCase() method
 console.log(company.toLowerCase());
 // e. Cut(slice) out the first word of the string using slice, substr() or substring() method
+console.log(company.slice(14, 21));
 console.log(company.substr(0, 9));
+console.log(company.substring(9, 21));
 // f. Check if the string contains a word Academy using includes() method
 console.log(company.includes("Academy"));
 // g. Split the string into array using split() method
@@ -299,7 +301,7 @@ if (your_age > my_age) {
   console.log(
     `I am ${my_age} years old, and you are ${your_age} years old SO you are ${my_age -
       your_age} years younger than me !`
-  );
+  ); 
 } else {
   console.log(
     `I am ${my_age} years old, and you are ${your_age} years old SO we are in the same age !`
@@ -308,12 +310,12 @@ if (your_age > my_age) {
 
 console.log("********** 9. TERNARY OPERATOR **********");
 ////////// 9. Ternary Operator
-let a = prompt("please enter a number: ");
-let b = prompt("please enter another number: ");
+// let a = prompt("please enter a number: ");
+// let b = prompt("please enter another number: ");
 
-console.log(
-  a > b ? `the ${a} is greater than ${b}` : `the ${a} is less than ${b}.`
-);
+// console.log(
+//   a > b ? `the ${a} is greater than ${b}` : `the ${a} is less than ${b}.`
+// );
 
 console.log("********** 10. ARRAY **********");
 ////////// 10. Array
@@ -355,14 +357,14 @@ console.log(
 console.log("********** 11. LOOP **********");
 ////////// 11. Loop
 // a. Iterate 0 to 10 using for loop, do the same using while and do while loop.
-console.log("**** for loop ****");
+console.log("** for loop ");
 for (var i = 0; i <= 10; i++) {
   console.log(i);
 }
 for (var k = 10; k >= 0; k--) {
   console.log(k);
 }
-console.log("**** while loop ****");
+console.log("** while loop ");
 var j = 0;
 while (j <= 10) {
   console.log(j);
@@ -375,7 +377,7 @@ do {
   x++;
 } while (x <= 10);
 
-// c. Iterate the array in question number 10 using a for loop and print out the items.
+// c. Iterate the array in question number 10 using a for loop and print out the items uppercase.
 for (var i = 0; i < itCompanies.length; i++) {
   console.log(i + 1 + " " + itCompanies[i].toUpperCase()); // i+1 execute a number in front of each item.
 }
@@ -391,19 +393,19 @@ var ITCompanies = [
   "moomi",
   "lolo"
 ];
-var certainCompany = prompt("Enter a popular company name here! ?");
-var firstItem = certainCompany.toLowerCase();
+// var certainCompany = prompt("Enter a popular company name here! ?");
+// var firstItem = certainCompany.toLowerCase();
 
-for (var c = 0; c <= ITCompanies.length; c++) {
-  if (ITCompanies[c] === firstItem) {
-    console.log(firstItem + " is found in the list :)");
-    var found = true;
-    break;
-  }
-}
-if (!found) {
-  console.log(firstItem + " is not found in the list :(");
-}
+// for (var c = 0; c <= ITCompanies.length; c++) {
+//   if (ITCompanies[c] === firstItem) {
+//     console.log(firstItem + " is found in the list :)");
+//     var found = true;
+//     break;
+//   }
+// }
+// if (!found) {
+//   console.log(firstItem + " is not found in the list :(");
+// }
 
 // e. Filter out companies which have more than two ‘o’ without the filter method
 
@@ -427,7 +429,7 @@ function myFunc(item, index, array) {
 console.log("********** 12. FUNCTION **********");
 
 ////////// 12. Function
-// a. Declare a function fullName and it print out your full name.
+// 1. Declare a function fullName and it print out your full name.
 
 function myName(first_name, last_name) {
   var full_name = first_name + last_name;
@@ -437,7 +439,7 @@ console.log(myName("mostafa ", "hazareh."));
 console.log(myName("Rohy ", "Dehqanzada."));
 console.log(myName("Niini ", "Jiiji"));
 
-/* b. Declare a function fullName and now it takes firstName, 
+/* 2. Declare a function fullName and now it takes firstName, 
 lastName as a parameter and it returns your full name. */
 
 function my_name(fName, lName) {
@@ -447,7 +449,7 @@ function my_name(fName, lName) {
 console.log(my_name("Nicole ", "Kidman")); // call the function to concat the name and also it can
 console.log(my_name(10, 32)); // the + sign affect on the numbers and add these to gether.
 
-// c. Declare a function addNumbers and it takes three parameters and it returns sum.
+// 3. Declare a function addNumbers and it takes three parameters and it returns sum.
 function addNumbers(num1, num2, num3) {
   var sum = num1 + num2 + num3;
   return sum;
@@ -459,6 +461,203 @@ console.log(`245 + 23 + 4 = ${d}`);
 console.log(
   sumResult + " + " + d + " + 10" + " = " + addNumbers(sumResult, d, 10)
 );
+
+// 4. An area of a rectangle is calculated as follows: area = length x width. Write a function which calculates areaOfRectangle.
+function areaOfRectangle(length, width) {
+  var area = length * width;
+  return area;
+}
+console.log(" The area of rectangle is = " + areaOfRectangle(14, 6) + "cm");
+console.log(" The area of rectangle is = " + areaOfRectangle(14, 16) + "cm");
+console.log(" The area of rectangle is = " + areaOfRectangle(4, 16) + "cm");
+
+//5. A perimeter of a rectangle is calculated as follows: perimeter= 2x(lenght + width). Write a function which calculates perimeterOfRectangle.
+function perimeterOfRectangle(length, width) {
+  var perimeter = 2 * (length + width);
+  return perimeter;
+}
+console.log(
+  " perimeter of this rectangle is = " + perimeterOfRectangle(14, 6) + "cm"
+);
+console.log(
+  " perimeter of this rectangle is = " + perimeterOfRectangle(14, 16) + "cm"
+);
+console.log(
+  " perimeter of this rectangle is = " + perimeterOfRectangle(4, 16) + "cm"
+);
+
+// 6. A volume of a rectangular prism is calculated as follows: volume = length x width x height. Write a function which calculates volumeOfRectPrism.
+function volumeOfRectPrism(length, width, height) {
+  var volume = length * width * height;
+  return volume;
+}
+console.log(
+  "the volume of rectangular prism is = " + volumeOfRectPrism(14, 6, 5) + "cm"
+);
+console.log(
+  "the volume of rectangular prism is = " + volumeOfRectPrism(4, 16, 5) + "cm"
+);
+console.log(
+  "the volume of rectangular prism is = " + volumeOfRectPrism(4, 6, 15) + "cm"
+);
+
+// 7. Area of a circle is calculated as follows: area = π x r x r. Write a function which calculates areaOfCircle
+function areaOfCircle(radius) {
+  var pi = Math.PI;
+  return pi * radius * radius;
+}
+console.log("The area of this circle is = " + areaOfCircle(21).toFixed(2)); //toFixed is declare two decimal integer.
+console.log("The area of this circle is = " + areaOfCircle(14).toFixed(3));
+console.log("The area of this circle is = " + areaOfCircle(7).toFixed(1));
+
+// 8. Circumference of a circle is calculated as follows: circumference = 2πr. Write a function which calculates circumOfCircle
+function circumOfCircle(r) {
+  var circum = 2 * Math.PI * r;
+  return circum;
+}
+console.log("Circumference of the circle is = " + circumOfCircle(12));
+console.log("Circumference of the circle is = " + circumOfCircle(8).toFixed(2));
+
+// 9. Density of a substance is calculated as follows:density= mass/volume. Write a function which calculates density.
+function CalDensity(mass, volume) {
+  var density = mass / volume;
+  return density;
+}
+console.log("density of this substance is = " + CalDensity(14, 2) + "ml");
+console.log("density of this substance is = " + CalDensity(25, 3) + "ml");
+console.log("density of this substance is = " + CalDensity(36, 4) + "ml");
+
+/* 10. Speed is calculated by dividing the total distance covered by a moving object divided
+   by the total amount of time taken. Write a function which calculates a speed of a moving object, speed. */
+function CalObjSpeed(DistanceTotal, TimeTotal) {
+  var speed = DistanceTotal / TimeTotal;
+  return speed;
+}
+console.log(
+  "The object moves 150m within 10s. the speed is =  " +
+    CalObjSpeed(150, 10) +
+    "m/s"
+);
+console.log(
+  "The object moves 300m within 25s. the speed is =  " +
+    CalObjSpeed(300, 25) +
+    "m/s"
+);
+
+/* 12. Temperature in ˚C can be converted to ˚F using this formula: ˚F = (˚C x 9 / 5) + 32. Write a function 
+which convert ˚C to ˚F convertCelsiusToFahrenheit. */
+function ConvertCelsiusToFahrenheit(C) {
+  var Fahrenheit = (C * 9) / 5 + 32;
+  return Fahrenheit;
+}
+console.log(
+  "the 13˚C is equal to " + ConvertCelsiusToFahrenheit(13).toFixed(2) + "˚F ."
+);
+console.log(
+  "the 23˚C is equal to " + ConvertCelsiusToFahrenheit(23).toFixed(2) + "˚F ."
+);
+console.log(
+  "the -13˚C is equal to " + ConvertCelsiusToFahrenheit(-13).toFixed(2) + "˚F ."
+);
+// 12.1 this function convert the Fahrenheit to Celsius using this formula ˚C = (˚F - 32) * 5/9.
+function ConvertFahrenheitToCelsius(F) {
+  var Celsius = ((F - 32) * 5) / 9;
+  return Celsius;
+}
+console.log(
+  "the 55 ˚F is equal to " +
+    ConvertFahrenheitToCelsius(55.4).toFixed(0) +
+    "˚C ."
+);
+console.log(
+  "the 55 ˚F is equal to " +
+    ConvertFahrenheitToCelsius(73.4).toFixed(0) +
+    "˚C ."
+);
+console.log(
+  "the 55 ˚F is equal to " +
+    ConvertFahrenheitToCelsius(8.59).toFixed(0) +
+    "˚C ."
+);
+
+// 13. Body mass index(BMI) is calculated as follows: bmi = weight in Kg / (height x height) in m2. Write a function which calculates bmi.
+function BMI(weight, height) {
+  var height = height / 100; // get height back to centimeter.
+  var bmi = weight / (height * height);
+  return bmi;
+}
+console.log("my Body Mass Index is = " + BMI(89, 174) + " kg/m2");
+console.log("my Body Mass Index is = " + BMI(75, 162).toFixed(2) + " kg/m2");
+console.log("my Body Mass Index is = " + BMI(45, 122).toFixed(2) + " kg/m2");
+
+/* 13.1   BMI is used to broadly define different weight groups in adults 20 years old or older.
+Check if a person is underweight, normal, overweight or obsess based the information given below.
+- The same groups apply to both men and women.
+- Underweight: BMI is less than 18.5
+- Normal weight: BMI is 18.5 to 24.9
+- Overweight: BMI is 25 to 29.9
+- Obese: BMI is 30 or more */
+function CalBMI(weight, height) {
+  var height = height / 100; // get height back to centimeter.
+  var bmi = weight / (height * height);
+  if (bmi >= 30) {
+    console.log(
+      "your BMI is " + bmi.toFixed(2) + ".  👎 Obsess: BMI is 30 or more"
+    );
+  } else if (bmi >= 25 && bmi <= 29.9) {
+    console.log(
+      "your BMI is = " + bmi.toFixed(2) + ".  ✋ Overweight: BMI is 25 to 29.9"
+    );
+  } else if (bmi >= 18.5 && bmi <= 24.9) {
+    console.log(
+      "your BMI is = " +
+        bmi.toFixed(2) +
+        ".  👍 Normal weight: BMI is 18.5 to 24.9"
+    );
+  } else {
+    console.log(
+      "your BMI is = " +
+        bmi.toFixed(2) +
+        ".  Underweight: BMI is less than 18.5"
+    );
+  }
+  return bmi;
+}
+CalBMI(69, 174);
+CalBMI(79, 164);
+CalBMI(89, 154);
+
+// 14. Write a function called checkSeason, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
+function checkSeason() {
+  var season = Date();
+  switch (season) {
+    case 0:
+      season = "Spring";
+      break;
+    case 1:
+      season = "Summer";
+      break;
+    case 2:
+      season = "Autumn";
+      break;
+    case 3:
+      season = "Winter";
+      break;
+  }
+  return season;
+}
+console.log(checkSeason());
+
+// console.log(Date());
+
+// 11. Weight of a substance is calculated as follows: weight = mass x gravity. Write a function which calculates weight.
+function CalWeight(mass, gravity) {
+  var weight = mass * gravity;
+  return weight;
+}
+console.log("The weight of this substance is = " + CalWeight(23, 12) + "kg");
+console.log("The weight of this substance is = " + CalWeight(24, 13) + "kg");
+console.log("The weight of this substance is = " + CalWeight(25, 14) + "kg");
 
 // d.  Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
 var cars = ["toyota", "mazda", "BMW", "benz", "nissan", "ford"];
@@ -522,10 +721,10 @@ function sumOfNumbers() {
   var EvensSum = 0;
   for (i = 0; i <= someNum.length - 1; i++) {
     if (someNum[i] % 2 == 0) {
-      EvensSum = EvensSum + someNum[i];
+      EvensSum += someNum[i];
       console.log(someNum[i] + " is even.");
     } else {
-      OddsSum = OddsSum + someNum[i];
+      OddsSum += someNum[i];
       console.log(someNum[i] + " is odd.");
     }
   }
@@ -545,7 +744,7 @@ console.log(" the sum of 6 values = " + showSum(13, 4, 13, 64, 5, 1));
 console.log("*********************");
 // this function define the numbers of the array is odd or even and show them in console.
 var someNos = [12, 7, 13, 34, 56, 7622, 1, 25, 37, 32, 58, 51];
-function showDiff() {
+function CalsomeNos() {
   for (i = 0; i < someNos.length; i++) {
     if (someNos[i] % 2 !== 0) {
       console.log(someNos[i] + " is odd.");
@@ -554,7 +753,7 @@ function showDiff() {
     }
   }
 }
-showDiff();
+CalsomeNos();
 console.log("*********************");
 function arrUnits() {
   let allEvens = 0;
