@@ -628,27 +628,63 @@ CalBMI(79, 164);
 CalBMI(89, 154);
 
 // 14. Write a function called checkSeason, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
-function checkSeason() {
-  var season = Date();
-  switch (season) {
-    case 0:
-      season = "Spring";
+function checkSeason(month) {
+  switch (month) {
+    case "March":
+    case "April":
+    case "May":
+      season = "spring";
+      console.log("Now is spring!");
       break;
-    case 1:
-      season = "Summer";
+    case "June":
+    case "July":
+    case "August":
+      season = "summer";
+      console.log("Now is Summer!");
       break;
-    case 2:
-      season = "Autumn";
+    case "September":
+    case "October":
+    case "November":
+      season = "autumn";
+      console.log("Now is Autumn!");
       break;
-    case 3:
-      season = "Winter";
+    case "December":
+    case "January":
+    case "February":
+      season = "winter";
+      console.log("Now is Winter!");
+      break;
+    default:
+      season = "";
+      console.log("I am in the air!!!");
       break;
   }
   return season;
 }
-console.log(checkSeason());
+checkSeason("March");
+checkSeason("July");
+checkSeason("September");
+checkSeason("February");
+checkSeason("12");
 
-// console.log(Date());
+console.log(Date());
+
+// 15. Linear equation is calculated as follows: ax + b = c. Write a function which calculates value of a linear equation, solveLinEquation.
+function solveLinEquation(a, b, c) {
+  var x = (c - b) / a;
+  return x;
+}
+console.log("X = " + solveLinEquation(5, 2, 22));
+console.log("X = " + solveLinEquation(4, 1, 13));
+console.log("X = " + solveLinEquation(8, 2, 18));
+
+// 16. Quadratic equation is calculated as follows: ax2 + bx + c = 0. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
+
+
+
+
+
+
 
 // 11. Weight of a substance is calculated as follows: weight = mass x gravity. Write a function which calculates weight.
 function CalWeight(mass, gravity) {
