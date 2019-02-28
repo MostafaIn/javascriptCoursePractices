@@ -32,6 +32,16 @@ console.log(typeof age);
 
 console.log("********** 3.STRING **********");
 ////////// 3. String
+// 7. Use substr to slice out the phase because because because in the following sentence:'You cannot end a sentence with because because because is a conjunction'
+let sentence =
+  "You cannot end a sentence with because because because is a conjunction";
+let firstPosition = sentence.indexOf("because");
+let lastPosition = sentence.lastIndexOf(" is");
+console.log(firstPosition);
+console.log(lastPosition);
+
+console.log(sentence.substring(firstPosition, lastPosition));
+
 // Declare a variable name company and assign it to an initial value “Integrify Academy”.
 var company = "    Integrify Academy";
 // a. Print the string  on the browser console using console.log()
@@ -78,7 +88,14 @@ console.log("Integrify".concat("Academy"));
 // t. Use repeat() method to print Integrify Academy 5 times
 console.log(company.repeat(5));
 
-console.log("********** 4. BOOLEAN **********");
+/* 27. Calculate the total annual income of the person by extract the numbers from the following text.
+ 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'*/
+var incomeText = "He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.".split(' ');
+console.log(incomeText);
+
+
+
+ console.log("********** 4. BOOLEAN **********");
 ////////// 4. Boolean => Boolean value is either true or false.
 // a. Write three JavaScript statement which provide truthy value.
 // var state1 = prompt("what is your name?");
@@ -319,9 +336,34 @@ console.log("********** 9. TERNARY OPERATOR **********");
 
 console.log("********** 10. ARRAY **********");
 ////////// 10. Array
-/* Declare an array  variable name itCompanies and assign initial values 
+
+// 2. Declare an array with more than 5 number of items
+const arrayNumbers=[12,23,34,45,56,67,78,89,90];
+console.log(arrayNumbers);
+
+// 3. Find the length of your array
+console.log(arrayNumbers.length+" items in this array.");
+
+// 4. Get the first item, the middle item and the last item of the array
+console.log(" the first item of array is = "+ arrayNumbers[0]);
+
+const middleItem= arrayNumbers[Math.floor((arrayNumbers.length)/2)];
+console.log("the middle item of the array is = "+ middleItem);
+const lastItem= arrayNumbers[Math.floor(arrayNumbers.length)-1];
+console.log("the last item of array is = "+ lastItem);
+
+
+// 5. Declare an array called mixedDataTypes,put different data types and in your array and the array size should be greater than 5
+const mixedDataTypes=['fruits', 12,'bicycle',34,true,'moomi',false,2333];
+console.log(mixedDataTypes);
+console.log(mixedDataTypes.length);
+
+
+
+
+/* 6. Declare an array  variable name itCompanies and assign initial values 
 Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon. */
-// a. Print the array using console.log()
+// 7. Print the array using console.log()
 var itCompanies = [
   "Facebook",
   "Google",
@@ -332,21 +374,34 @@ var itCompanies = [
   "Amazon"
 ];
 console.log(itCompanies);
-// b. Print the number of companies in the array
+// 8. Print the number of companies in the array
 console.log(`there are ${itCompanies.length} companies are listed here!`);
 
-// c. Print out each company
-console.log(itCompanies[1]);
+// 9. Print the first company, middle and last company
+console.log(itCompanies[0].toUpperCase()+ ' is the first company in this list.');
+var middleCo= itCompanies[Math.floor((itCompanies.length) /2)];
+console.log(middleCo.toUpperCase() + " is in the middle of this list.")
+var lastCo= itCompanies[Math.floor((itCompanies.length) -1)];
+console.log(lastCo.toUpperCase() +" is the last company name in the list.");
 
+
+// 11. Change every company to uppercase and print them out
 for (var i = 0; i < itCompanies.length; i++) {
-  console.log(i + 1 + " " + itCompanies[i]); // i+1 execute a number in front of each item.
+  console.log(i + 1 + " " + itCompanies[i].toUpperCase()); // i+1 execute a number in front of each item.
 }
 console.log("  ***** now the items in uppercase. *****");
-// d. Change every company to uppercase and print them out
-// console.log(itCompanies.toUpperCase());
 
-// e. Print the array like a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
+
+
+// 12. Print the array like a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
 console.log(itCompanies.toString() + " are big companies in the world.");
+
+
+// 13. Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is not found.
+
+
+
+
 // f. Sort the array using sort() method
 console.log(" sorted the items in accending order. => " + itCompanies.sort());
 // g. Reverse the array using reverse() method
@@ -742,22 +797,19 @@ function capitalizeArray(carsArr) {
 console.log(capitalizeArray(["toyota", "nissan", "mazda"]));
 
 // 22. Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
-function addItem(item) {
-  let items = [];
-  for (let i = 0; i <= items.length; i++) {
-    items.push(item[i]);
-    console.log(item[i]);
-  }
-  console.log(items);
 
+function addItems(item) {
+  var items=[];
+  items.push(item);
   return items;
 }
-addItem(["ONE"]);
-addItem(["TWO"]);
-addItem(["THREE"]);
+console.log(addItems("one"));
+console.log(addItems("two"));
+console.log(addItems(12));
+console.log(addItems(123));
 addItem(["FOUR"]);
 addItem(["FIVE"]);
-addItem([123]);
+
 
 // 11. Weight of a substance is calculated as follows: weight = mass x gravity. Write a function which calculates weight.
 function CalWeight(mass, gravity) {
@@ -790,8 +842,6 @@ console.log(cars);
 
 // h. Declare a function name addItem. It returns array after adding an item
 function addItem(cars) {
-  // cars.push("frarry");
-  // cars.push("VolksWagon");
   return cars;
 }
 addItem(cars.push("skuda"));
