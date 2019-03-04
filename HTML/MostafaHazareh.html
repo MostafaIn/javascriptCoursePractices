@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Test01</title>
+  </head>
+  <body>
+    <h1>JavaScript Test - 1</h1>
+
+    <script>
+      // 1.
+      // function countWord(paragraph, word){
+      //     const paragraph = "I love teaching. If you do not love teaching what else can you love. I love JavaScript if you do not love something which can give life to your application what else can you love.";
+
+      // }
+
+      // countWord(paragraph);
+
+      // 2.
+      function checkDataTypes(arrDataType) {
+        for (var i = 0; i < arrDataType.length; i++) {
+          console.log(typeof arrDataType[i]);
+        }
+      }
+      const arr = ["Asbeneh", 100, true, null, undefined, { job: "teaching" }];
+      console.log(arr);
+      console.log(checkDataTypes(arr));
+      const mixedData = ["john", 25, "david", 30, "sara", 22];
+      console.log(mixedData);
+      console.log(checkDataTypes(mixedData));
+
+      // 3.
+      function agesGreaterEighteen() {
+        for (var i = 0; i < ages.length; i++) {
+          if (ages[i] > 18) {
+            console.log(ages[i]);
+          }
+        }
+      }
+      let ages = [35, 30, 17, 18, 15, 22, 16, 20];
+      agesGreaterEighteen(ages);
+
+      // 4.
+      function findMiddle(someList) {
+        const middleItem = someList[Math.floor(someList.length / 2)];
+        console.log("the middle item of the array is = " + middleItem);
+        if (middleItem == someList[middleItem]) {
+          someList.pop(someList[middleItem]);
+          console.log(someList);
+        }
+
+        return middleItem;
+      }
+      findMiddle([12, 23, 34, 45, 56, 67, 78, 89, 90]);
+      findMiddle(["mostafa", "hazareh", "Afghanistan", 34, "junior developer"]);
+
+      // 5.
+      const getAvg = (arr) => {
+        const reducer = (total, currentValue) => total + currentValue;
+        const sum = arr.reduce(reducer);
+        return sum / arr.length;
+      };
+      console.log(getAvg([23, 12, 15, 34, 16]));
+
+      function getAverage(Ages) {
+        let sumAges = 0;
+        for (let i = 0; i < Ages.length; i++) {
+          sumAges += ages[i];
+        }
+        let avg = sumAges / Ages.length;
+        return avg;
+      }
+      console.log(getAverage([12, 23, 15, 50]));
+      console.log(getAverage([12, 23, 25]));
+
+      let yourAge = prompt("how old are you?");
+      console.log(yourAge);
+      let allowance = yourAge > 18 ? "you are allowed," : "you are not allowed";
+      console.log(allowance);
+    </script>
+  </body>
+</html>
