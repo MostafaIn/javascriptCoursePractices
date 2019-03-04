@@ -7,10 +7,10 @@
     <title>my own practice</title>
   </head>
   <body>
-    <h1>This page is just for some youtube practice.</h1>
+    <h1>This page is a youtube practice.</h1>
     <h4>*** JavaScript Higher Order Functions & Arrays ***</h4>
     <ul>
-      <li>Fliter()</li>
+      <li>Filter()</li>
       <li>Map()</li>
       <li>sort()</li>
       <li>reduce()</li>
@@ -33,37 +33,36 @@
         { name: "mostafa", age: 34, from: "Afghanistan" },
         { name: "rohy", age: 31, from: "Afghanistan" },
         { name: "laura", age: 32, from: "finland" },
-        { name: "saimon", age: 44, from: "england" },
-        { name: "solo", age: 30, from: "kiina" }
+        { name: "Brandon", age: 44, from: "england" },
+        { name: "solo", age: 30, from: "china" }
       ];
-      // for loop
-      console.log("***** review the arrays items. *****");
+
+      // for loop  **********************************************************
+      console.log("***** to view the arrays items. *****");
       for (let i = 0; i < companies.length; i++) {
         console.log(companies[i]);
       }
       for (let i = 0; i < ages.length; i++) {
         console.log(ages[i]);
       }
+      for (let i = 0; i < students.length; i++) {
+        console.log(students[i]);
+      }
 
-      // for each
+      // for each **********************************************************
       companies.forEach(function(company) {
         console.log(`${company.name},is a  ${company.category} company.`);
       });
-      //*****************************************************
+
+      ages.forEach(function(age) {
+        console.log(`this is ${age} yearsold.`);
+      });
+
       students.forEach(function(man) {
         console.log(`${man.name}, is from ${man.from}`);
       });
-      const youngerman = students.filter((FromAge) => FromAge.age == 34);
-      console.log(youngerman);
-      const comeFrom = students.filter(
-        (comeFrom) => comeFrom.from == "Afghanistan"
-      );
-      console.log(comeFrom);
-      const legalAge = students.filter((correctAge) => correctAge.age >= 34);
-      console.log(legalAge);
 
-
-      //**** FILTER
+      //**** FILTER   **************************************************
       console.log("******    FILTER    *****");
       let canDrink = [];
       for (let i = 0; i < ages.length; i++) {
@@ -108,117 +107,136 @@
       const lastedCom = companies.filter((com) => com.end - com.start >= 95);
       console.log(lastedCom);
 
-      // MAP
+      const youngerman = students.filter((FromAge) => FromAge.age == 34);
+      console.log(youngerman);
+      const comeFrom = students.filter(
+        (comeFrom) => comeFrom.from == "Afghanistan"
+      );
+      console.log(comeFrom);
+      const legalAge = students.filter((correctAge) => correctAge.age >= 34);
+      console.log(legalAge);
+
+      // MAP *******************************************************************
+
       console.log("******     MAP    *****");
       // create array of company names.
-      const companyName= companies.map(function (company){
-          return company.name;
+      const companyName = companies.map(function(company) {
+        return company.name;
       });
       console.log(companyName);
 
-      const youFrom= students.map(function (myOrigin){
-          return myOrigin.from;
+      const youFrom = students.map(function(myOrigin) {
+        return myOrigin.from;
       });
       console.log(youFrom);
 
-      const testCom= companies.map(function (company){
-          return `${company.name} is starts from ${company.start}`;
+      const testCom = companies.map(function(company) {
+        return `${company.name} is starts from ${company.start}`;
       });
       console.log(testCom);
 
-      const testCom2= companies.map(company => `${company.name} is starts from ${company.start}`);
+      const testCom2 = companies.map(
+        (company) => `${company.name} is starts from ${company.start}`
+      );
       console.log(testCom2);
 
-      const studentAge= students.map(function (theirold){
-          return `${theirold.name} is ${theirold.age} yearsold.`;
+      const studentAge = students.map(function(theirold) {
+        return `${theirold.name} is ${theirold.age} yearsold.`;
       });
       console.log(studentAge);
 
-      const studentAge2= students.map(theirs => `${theirs.name} is from ${theirs.from}.`);
+      const studentAge2 = students.map(
+        (theirs) => `${theirs.name} is from ${theirs.from}.`
+      );
       console.log(studentAge2);
 
-      const ageSqr= ages.map(age => Math.sqrt(age));
+      const ageSqr = ages.map((age) => Math.sqrt(age));
       console.log(ageSqr);
-      const agetimes2= ages.map(ages2 => ages2 * 2);
+      const agetimes2 = ages.map((ages2) => ages2 * 2);
       console.log(`${ages},times 2 is =  ${agetimes2}`);
 
+      // SORT  *******************************************************************************
+      console.log("*****   SORT   *****");
 
-      // SORT
-      console.log('*****   SORT   *****');
-
-      const sortedAges= ages.sort((a,b) => a - b);
+      const sortedAges = ages.sort((a, b) => a - b);
       console.log(sortedAges);
       // sort companies by start year
-      const sortedCom= companies.sort(function(c1, c2){
-          if(c1.start > c2.start){
-              return 1;
-          }else{
-              return -1;
-          }
+      const sortedCom = companies.sort(function(c1, c2) {
+        if (c1.start > c2.start) {
+          return 1;
+        } else {
+          return -1;
+        }
       });
       console.log(sortedCom);
       // sort students by their age
-      const stAge= students.sort(function (a1, a2){
-          if(a1.age > a2.age){
-              return 1;
-          }else{
-              return -1;
-          }
+      const stAge = students.sort(function(a1, a2) {
+        if (a1.age > a2.age) {
+          return 1;
+        } else {
+          return -1;
+        }
       });
       console.log(stAge);
 
-      
       // sorted the students array by name
-      const stSortedName= students.sort(function (n1, n2){
-          if(n1.name > n2.name){
-              return 1;
-          }else{
-              return -1;
-          }
+      const stSortedName = students.sort(function(n1, n2) {
+        if (n1.name > n2.name) {
+          return 1;
+        } else {
+          return -1;
+        }
       });
       console.log(stSortedName);
-    
-      // REDUCE
-      console.log('*****   REDUCE    *****');
+
+      // REDUCE ***********************************************************
+
+      console.log("*****   REDUCE    *****");
       // add all items to ages
-      let ageSum=0;
-      for (let i=0; i< ages.length; i++){
-          ageSum += ages[i];
+      let ageSum = 0;
+      for (let i = 0; i < ages.length; i++) {
+        ageSum += ages[i];
       }
       console.log(ageSum);
-     //
-     const agesSum = ages.reduce(function (total, age) {
-            return total + age;
-        });
-        console.log(agesSum);
+      //
+      const agesSum = ages.reduce(function(total, age) {
+        return total + age;
+      });
+      console.log(agesSum);
 
-    const agesSum2= ages.reduce((total, age) => total + age);
-    console.log(agesSum2);
+      const agesSum2 = ages.reduce((total, age) => total + age);
+      console.log(agesSum2);
 
-
-    const stTotalAge= students.reduce(function (a,b){
+      const stTotalAge = students.reduce(function(a, b) {
         return a.age + b.age;
-    });
-    console.log(stTotalAge);
-      // the average of ages items 
-      function AvgAges(avg){
-        avg = ageSum /ages.length; 
+      }, 0);
+      console.log(stTotalAge);
+      // the average of ages items
+      function AvgAges(avg) {
+        avg = ageSum / ages.length;
         return avg;
       }
       console.log(AvgAges());
-      
+
       // Get total years for all companies
-      const totalYears= companies.reduce(function (total, company){
-          return total +(company.end - company.start);
-      },0);
+      const totalYears = companies.reduce(function(total, company) {
+        return total + (company.end - company.start);
+      }, 0);
       console.log(totalYears);
       // OR
-      const totalYears2= companies.reduce((total,company) => total + (company.end - company.start),0);
+      const totalYears2 = companies.reduce(
+        (total, company) => total + (company.end - company.start),
+        0
+      );
       console.log(totalYears2);
-      
 
-   
-
+      // COMBINE METHOD  ********************************************************************************
+      const combined = ages
+        .map((age) => age * 2)
+        .filter((age) => age >= 21)
+        .sort((a, b) => a - b)
+        .reduce((a, b) => a + b, 0);
+      console.log(combined);
     </script>
   </body>
 </html>
