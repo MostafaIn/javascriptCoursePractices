@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h4>*** JavaScript Higher Order Functions & Arrays ***</h4>
+    <ul>
+      <li>Filter()</li>
+      <li>Map()</li>
+      <li>sort()</li>
+      <li>reduce()</li>
+    </ul>
+
+    <script>
+      const cars = [
+        {
+          MadeBy: "Benz",
+          brand: "mercedes",
+          from: "Germany",
+          model: 2015,
+          price: 55000
+        },
+        {
+          MadeBy: "Niisan",
+          brand: "tiida",
+          from: "japan",
+          model: 2008,
+          price: 7500
+        },
+        {
+          MadeBy: "Mazda",
+          brand: "GLX",
+          from: "japan",
+          model: 2010,
+          price: 55000
+        },
+        {
+          MadeBy: "Volkswagon",
+          brand: "golf",
+          from: "Germany",
+          model: 2017,
+          price: 35000
+        },
+        {
+          MadeBy: "Benz",
+          brand: "GLC",
+          from: "Germany",
+          model: 2018,
+          price: 175000
+        },
+        {
+          MadeBy: "Honda",
+          brand: "civic",
+          from: "japan",
+          model: 2010,
+          price: 15000
+        },
+        {
+          MadeBy: "Ford",
+          brand: "focus",
+          from: "usa",
+          model: 2012,
+          price: 12000
+        },
+        {
+          MadeBy: "Niisan",
+          brand: "leaf",
+          from: "japan",
+          model: 2018,
+          price: 65000
+        },
+        {
+          MadeBy: "Ford",
+          brand: "ranger",
+          from: "usa",
+          model: 2010,
+          price: 65000
+        }
+      ];
+      // FOR LOOP  ******************************************************
+      for (let i = 0; i < cars.length; i++) {
+        console.log(cars[i]);
+      }
+
+      // for each *******************************************************
+      cars.forEach(function(car) {
+        console.log(
+          `${car.brand} is from ${car.from} and made by ${car.MadeBy}.`
+        );
+      });
+
+      //**** FILTER   ***************************************************
+      const madeIn = cars.filter(function(car) {
+        if (car.from == "japan") {
+          return true;
+        }
+      });
+      console.log(madeIn);
+      const madeIn2 = cars.filter((car) => car.from == "Germany");
+      console.log(madeIn2);
+
+      const Co = cars.filter(function(made) {
+        if (made.MadeBy == "Niisan") {
+          return true;
+        }
+      });
+      console.log(Co);
+
+      const Co2 = cars.filter((made) => made.MadeBy == "Ford");
+      console.log(Co2);
+
+      // MAP *************************************************************
+      const carBrand = cars.map(function(car) {
+        return car.brand;
+      });
+      console.log(carBrand);
+
+      // SORT  ***********************************************************
+      const carPrice = cars.sort(function(c1, c2) {
+        if (c1.price > c2.price) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+      console.log(carPrice);
+
+      const carModel = cars.sort(function(m1, m2) {
+        if (m1.model > m2.model) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+      console.log(carModel);
+
+      // REDUCE ***********************************************************
+      const totalPrice = cars.reduce(function(total, sum) {
+        return total + sum.price;
+      }, 0);
+      console.log(totalPrice);
+
+      const totalPrice2 = cars.reduce((acc, sum) => acc + sum.price, 0);
+      console.log(`The total price of all these cars is =  ${totalPrice2} $`);
+    </script>
+  </body>
+</html>

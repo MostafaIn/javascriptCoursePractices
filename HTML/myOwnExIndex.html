@@ -37,6 +37,72 @@
         { name: "solo", age: 30, from: "china" }
       ];
 
+      const cars = [
+        {
+          MadeBy: "Benz",
+          brand: "mercedes",
+          from: "Germany",
+          model: 2015,
+          price: 55000
+        },
+        {
+          MadeBy: "Niisan",
+          brand: "tiida",
+          from: "japan",
+          model: 2008,
+          price: 7500
+        },
+        {
+          MadeBy: "Mazda",
+          brand: "GLX",
+          from: "japan",
+          model: 2010,
+          price: 55000
+        },
+        {
+          MadeBy: "Volkswagon",
+          brand: "golf",
+          from: "Germany",
+          model: 2017,
+          price: 35000
+        },
+        {
+          MadeBy: "Benz",
+          brand: "GLC",
+          from: "Germany",
+          model: 2018,
+          price: 175000
+        },
+        {
+          MadeBy: "Honda",
+          brand: "civic",
+          from: "japan",
+          model: 2010,
+          price: 15000
+        },
+        {
+          MadeBy: "Ford",
+          brand: "focus",
+          from: "usa",
+          model: 2012,
+          price: 12000
+        },
+        {
+          MadeBy: "Niisan",
+          brand: "leaf",
+          from: "japan",
+          model: 2018,
+          price: 65000
+        },
+        {
+          MadeBy: "Ford",
+          brand: "ranger",
+          from: "usa",
+          model: 2010,
+          price: 65000
+        }
+      ];
+
       // for loop  **********************************************************
       console.log("***** to view the arrays items. *****");
       for (let i = 0; i < companies.length; i++) {
@@ -49,6 +115,9 @@
         console.log(students[i]);
       }
 
+      for (let i = 0; i < cars.length; i++) {
+        console.log(cars[i]);
+      }
       // for each **********************************************************
       companies.forEach(function(company) {
         console.log(`${company.name},is a  ${company.category} company.`);
@@ -62,6 +131,11 @@
         console.log(`${man.name}, is from ${man.from}`);
       });
 
+      cars.forEach(function(car) {
+        console.log(
+          `${car.brand} is from ${car.from} and made by ${car.MadeBy}.`
+        );
+      });
       //**** FILTER   **************************************************
       console.log("******    FILTER    *****");
       let canDrink = [];
@@ -116,6 +190,24 @@
       const legalAge = students.filter((correctAge) => correctAge.age >= 34);
       console.log(legalAge);
 
+      const madeIn = cars.filter(function(car) {
+        if (car.from == "japan") {
+          return true;
+        }
+      });
+      console.log(madeIn);
+      const madeIn2 = cars.filter((car) => car.from == "Germany");
+      console.log(madeIn2);
+
+      const Co = cars.filter(function(made) {
+        if (made.MadeBy == "Niisan") {
+          return true;
+        }
+      });
+      console.log(Co);
+
+      const Co2 = cars.filter((made) => made.MadeBy == "Ford");
+      console.log(Co2);
       // MAP *******************************************************************
 
       console.log("******     MAP    *****");
@@ -155,6 +247,16 @@
       const agetimes2 = ages.map((ages2) => ages2 * 2);
       console.log(`${ages},times 2 is =  ${agetimes2}`);
 
+      const carBrand = cars.map(function(car) {
+        return car.brand;
+      });
+      console.log(carBrand);
+
+      const carBrand2 = cars.filter((car2) => car2.model < 2010);
+      console.log(carBrand2);
+
+      const carname = cars.filter((mycar) => mycar.MadeBy);
+      console.log(carname);
       // SORT  *******************************************************************************
       console.log("*****   SORT   *****");
 
@@ -189,8 +291,25 @@
       });
       console.log(stSortedName);
 
-      // REDUCE ***********************************************************
+      const carPrice = cars.sort(function(c1, c2) {
+        if (c1.price > c2.price) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+      console.log(carPrice);
 
+      const carModel = cars.sort(function(m1, m2) {
+        if (m1.model > m2.model) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+      console.log(carModel);
+
+      // REDUCE ***********************************************************
       console.log("*****   REDUCE    *****");
       // add all items to ages
       let ageSum = 0;
@@ -230,7 +349,12 @@
       );
       console.log(totalYears2);
 
+      const totalPrice = cars.reduce(function(a, b) {
+        return a.price + b.price;
+      }, 0);
+      console.log(totalPrice);
       // COMBINE METHOD  ********************************************************************************
+      console.log("*****   COMBINE METHOD    *****");
       const combined = ages
         .map((age) => age * 2)
         .filter((age) => age >= 21)

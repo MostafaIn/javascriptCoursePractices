@@ -11,20 +11,69 @@
 
     <script>
       // 1.
-      // function countWord(paragraph, word){
-      //     const paragraph = "I love teaching. If you do not love teaching what else can you love. I love JavaScript if you do not love something which can give life to your application what else can you love.";
+      const paragraph =
+        "I love teaching. If you do not love teaching what else can you love. I love JavaScript if you do not love something which can give life to your application what else can you love.";
 
-      // }
+      function countWord(paragraph, word) {
+        const formatedP = paragraph.split(" ");
+        let count = 0;
+        for (let i = 0; i < formatedP.length; i++) {
+          if (formatedP[i] == word) {
+            count += 1;
+          }
+        }
+        return formatedP;
+      }
+      console.log(countWord(paragraph, "love"));
 
-      // countWord(paragraph);
+      // const countWord = (p, w) => {
+      //   const pattern = new RegExp(w, "gi");
+      //   const match = p.match(pattern);
+      //   return match.length || "david";
+      // };
+      // console.log(countWord);
 
+      const person = {
+        name: "david",
+        age: 34,
+        country: "finland"
+      };
+      for (let key in person) {
+        console.log(key);
+      }
+      //////////////////////////////////////////////////////////////
+      const countries = [
+        "finland",
+        "scotland",
+        "sweden",
+        "norway",
+        "iceland",
+        "netherland"
+      ];
+      const landCountries = countries.filter(function(country) {
+        return country.includes("land");
+      });
+      console.log(landCountries);
+
+      const countriesLong = countries.filter(function(cLong) {
+        return cLong.length === 6;
+      });
+      console.log(countriesLong);
+
+      const countryMap = countries.map(function(cUp) {
+        return cUp.toUpperCase();
+      });
+      console.log(countryMap);
+      const countryMap2 = countries.map((cu) => cu.toUpperCase());
+      console.log(countryMap2);
+      /////////////////////////////////////////////////////////////////////
       // 2.
       function checkDataTypes(arrDataType) {
         for (var i = 0; i < arrDataType.length; i++) {
           console.log(typeof arrDataType[i]);
         }
       }
-      const arr = ["Asbeneh", 100, true, null, undefined, { job: "teaching" }];
+      const arr = ["Asabeneh", 100, true, null, undefined, { job: "teaching" }];
       console.log(arr);
       console.log(checkDataTypes(arr));
       const mixedData = ["john", 25, "david", 30, "sara", 22];
