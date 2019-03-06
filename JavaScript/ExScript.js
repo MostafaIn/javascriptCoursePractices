@@ -478,7 +478,7 @@ for (var o = 0; o <= ITCompanies.length; o++) {
   }
 }
 
-// foreach loop
+// forEach loop  *************************************************************
 console.log("********* forEach loop ********");
 var pN = ["mina", "sina", "han", "me", "te", "he"];
 pN.forEach(myFunc);
@@ -507,7 +507,6 @@ function my_name(fName, lName) {
   return full_name;
 }
 console.log(my_name("Nicole ", "Kidman")); // call the function to concat the name and also it can
-console.log(my_name(10, 32)); // the + sign affect on the numbers and add these to gether.
 
 // 3. Declare a function addNumbers and it takes three parameters and it returns sum.
 function addNumbers(num1, num2, num3) {
@@ -803,17 +802,26 @@ console.log(capitalizeArray(["toyota", "nissan", "mazda"]));
 
 // 22. Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
 
-function addItems(item) {
-  var items = [];
-  items.push(item);
-  return items;
+function addItems(array, item) {
+  let newArray = array.slice();
+  newArray.push(item);
+  return newArray;
 }
-console.log(addItems("one"));
-console.log(addItems("two"));
-console.log(addItems(12));
-console.log(addItems(123));
-addItem(["FOUR"]);
-addItem(["FIVE"]);
+console.log(addItems(ITCompanies, "YLE"));
+console.log(addItems(ITCompanies, "Samsung"));
+
+// 23. Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
+const Arr = [12, 13, 14, 15, 16, 17, 18, 19, 20];
+function removeItem(array, index) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === index) {
+      Arr.splice(i, 1);
+    }
+  }
+  return Arr;
+}
+console.log(removeItem(Arr, 4));
+console.log(Arr);
 
 // 11. Weight of a substance is calculated as follows: weight = mass x gravity. Write a function which calculates weight.
 function CalWeight(mass, gravity) {

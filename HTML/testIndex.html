@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <style>
+      div {
+        border: 2px solid black;
+        text-align: center;
+        width: 400px;
+        height: 250px;
+        margin: auto;
+      }
+    </style>
   </head>
   <body>
     <h4>*** JavaScript Higher Order Functions & Arrays ***</h4>
@@ -14,7 +23,35 @@
       <li>sort()</li>
       <li>reduce()</li>
     </ul>
+    <div>
+      <p id="ph"></p>
+      <br />
+      <input type="text" name="txt" id="txt" />
+      <button onclick=" ">RESET</button>
+      <br />
+      <br />
 
+      <button onclick="addToList()" for="txt">ADD</button>
+      <button onclick="">SEARCH</button>
+      <button onclick="">DELETE</button>
+    </div>
+    <script>
+      document.getElementById("ph").innerHTML = " ";
+      const myList = [];
+      document.getElementById("ph").innerHTML = myList;
+
+      function addToList(name) {
+        let someName = document.getElementById("txt").value;
+
+        if (someName == " ") {
+          alert("please type your name here!", "your name here");
+        } else {
+          myList.push(someName);
+          document.getElementById("ph").innerHTML = myList;
+          document.getElementById("txt").value = " ";
+        }
+      }
+    </script>
     <script>
       const cars = [
         {

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM lecture.</title>
+  </head>
+  <body>
+    <h1 class="title" id="t1">Title ONE</h1>
+    <h1 class="title" id="t2">Title TWO</h1>
+    <h1 class="title" id="t3">Title THREE</h1>
+    <div id="personInfo"></div>
+    <script>
+      // targeting by tag name
+      const titles = document.getElementsByTagName("h1");
+      for (let i = 0; i < titles.length; i++) {
+        console.log(titles[i]);
+      }
+
+      // target by class name
+      const titles2 = document.getElementsByClassName("title");
+      console.log(titles2);
+
+      // target by id
+      const titles3 = document.getElementById("t2");
+      console.log(titles3);
+
+      const title = document.querySelectorAll("h1");
+      console.log(title);
+
+      // title.forEach((Title) => console.log(Title));
+
+      const firstTitle = document.querySelector("t1");
+      console.log(firstTitle);
+
+      console.log("***** create an object ***********************");
+
+      function createObj(name, country, age) {
+        const obj = {};
+        obj.name = name;
+        obj.country = country;
+        obj.age = age;
+        return obj;
+      }
+      console.log(createObj("mostafa", "Afghanistan", 34));
+      console.log(createObj("mosood", "Afghanistan", 29));
+      console.log(createObj("sulaiman", "Nigeria", 31));
+      console.log("***** for in loop ***********************");
+      const myInfo = {
+        name: "mostafa",
+        country: "Afghanistan",
+        age: 34
+      };
+      for (let prob in myInfo) {
+        console.log(`my ${prob} is ${myInfo[prob]}.`);
+      }
+      console.log("****************************");
+      for (let i = 0; i <= 50; i += 5) {
+        if (i == 30) {
+          break;
+        }
+
+        // if (i == 5 || i == 15 || i == 25 || i == 35 || i == 45) {
+        //   continue;
+        // }
+        console.log(i);
+      }
+    </script>
+  </body>
+</html>
