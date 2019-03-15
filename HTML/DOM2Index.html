@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>second DOM lectures </title>
+    <style>
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        justify-content: space-between;
+    }
+    .wrapper > div{
+        width: 50px;
+        height: 50px;
+        margin: 3px;
+        border: 2px solid black;
+        border-radius: 50%;
+        text-align: center;
+        padding: 10px;
+        
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper"></div>
+
+
+    <h1 id="first-title">First Title</h1>
+    <h1>Second Title</h1>
+    <h1>Third Title</h1>
+    <h1 class="lastTitle"></h1>
+    
+    <h2> this is not a div.</h2>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVASCIRPT</li>
+    </ul>
+
+    <h3></h3>
+    <h3></h3>
+    <h3></h3>
+    <h3></h3>
+    
+    <img />
+    <script>
+    const firstTitle= document.getElementById('first-title');
+    console.log(firstTitle); 
+    console.log(firstTitle.textContent);
+
+    // document.getElementsByClassName('lastTitle').innerHTML= "this is also a title";
+
+    const titles= document.getElementsByTagName('h1');
+    console.log(titles);
+    console.log(titles.length);
+
+    for(let i=0; i< titles.length; i++){
+        console.log(titles[i]);
+        console.log(titles[i].textContent);
+    }
+
+    ////////////// call the element by declaring a variable with QuerySelector
+
+const firstT= document.querySelector('#first-title');
+console.log(firstT);
+
+const Titles= document.querySelectorAll('h1');
+console.log(titles);
+Titles.forEach((element, index) =>{
+    if(index %2 == 0){
+        element.textContent= 'EVEN Title';
+        element.style.color= 'red';
+    }else{
+        element.textContent = 'ODD Title';
+        element.style.color = 'green';
+    }
+    console.log(index +1, element);
+});
+
+
+// textContent, innerHTML, style
+const h2= document.querySelector('h2');
+console.log(h2);
+console.log(h2.textContent);
+h2.textContent='olen mostafa.';
+
+// set attributes
+const T= document.querySelector('h3');
+// console.log(T);
+// T.id='ttId';
+// console.log(tt);
+// T.className='ttClass';
+T.setAttribute('id','ttI');
+console.log(T);
+T.setAttribute('class','ttC');
+console.log(T);
+
+// 
+const cat= document.querySelector('img');
+// img.src('../images/cat.jpg');
+
+const fT= document.createElement('h4');
+fT.textContent= 'first element created by javascript';
+fT.setAttribute('id','jsT');
+console.log(fT);
+
+document.body.appendChild(fT);
+
+//
+const contents= ['first', 'second','third'];
+
+let fTitle;
+for(let i=0; i< 3; i++){
+    fTitle= document.createElement('h1');
+    // console.log(fTitle);
+    // fTitle.textContent='hello friend';
+    fTitle.textContent = contents[i];
+    document.body.appendChild(fTitle); 
+}
+
+// 
+const wrapper= document.querySelector('.wrapper');
+let box;
+
+for(let i=0; i<=100; i++){
+    box = document.createElement('div');
+        if( i%2 ==0){
+            box.style.backgroundColor='red';
+        }else{
+            box.style.backgroundColor='green';
+        }
+
+
+   box.textContent= i;
+   console.log(box); 
+  wrapper.appendChild(box);
+}
+
+
+
+    </script>
+</body>
+</html>

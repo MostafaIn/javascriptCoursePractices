@@ -27,28 +27,42 @@
       <p id="ph"></p>
       <br />
       <input type="text" name="txt" id="txt" />
-      <button onclick=" ">RESET</button>
+      <button onclick="resetBtn() ">RESET</button>
       <br />
       <br />
 
-      <button onclick="addToList()" for="txt">ADD</button>
-      <button onclick="">SEARCH</button>
-      <button onclick="">DELETE</button>
+      <button onclick="addItem()" for="txt">ADD</button>
+      <button onclick="removeItem()">DELETE</button>
     </div>
     <script>
-      document.getElementById("ph").innerHTML = " ";
       const myList = [];
       document.getElementById("ph").innerHTML = myList;
+      // reset button
+      function resetBtn() {
+        document.getElementById("txt").value = " ";
+      }
 
-      function addToList(name) {
+      // add item
+      function addItem(name) {
         let someName = document.getElementById("txt").value;
-
         if (someName == " ") {
           alert("please type your name here!", "your name here");
         } else {
           myList.push(someName);
           document.getElementById("ph").innerHTML = myList;
           document.getElementById("txt").value = " ";
+        }
+      }
+
+      // remove item
+      function removeItem() {
+        let someName = document.getElementById("txt").value;
+        let index = myList.indexOf("txt");
+        if (index !== -1) {
+          myList.splice(index, 1);
+          document.getElementById("ph").innerHTML = myList;
+        } else {
+          alert("NOT FOUND !!!");
         }
       }
     </script>
@@ -183,6 +197,39 @@
 
       const totalPrice2 = cars.reduce((acc, sum) => acc + sum.price, 0);
       console.log(`The total price of all these cars is =  ${totalPrice2} $`);
+
+      function mina() {
+        console.log("olen mostafa");
+      }
+      let timeout = setTimeout(mina, 5 * 1000);
+
+      let s = 0;
+      function sec() {
+        s++;
+        console.log("seconds: " + s);
+        if (s == 10) {
+          console.log("10 seconds in enough.");
+          clearInterval(interval);
+        }
+      }
+      let interval = setInterval(sec, 1000);
+
+      ////*********************************************
+      var heading = document.createElement("h1");
+      heading.setAttribute("class", "Hh");
+      heading.textContent = "mostafa";
+      document.body.appendChild(heading);
+
+      var showDate = document.createElement("h4");
+      showDate.textContent = new Date().toDateString();
+      document.body.appendChild(showDate);
+
+      var h4Del = document.querySelector("h4");
+      // document.body.removeChild(h4Del);
+      h4Del.classList.add("moi");
+      h4Del.style.backgroundColor = "red";
+      h4Del.style.color = "white";
+      h4Del.style.padding = "20px";
     </script>
   </body>
 </html>

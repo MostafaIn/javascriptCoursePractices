@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document Object Model (event lecture 13mar19)</title>
+    <style>
+      span,
+      button {
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <input type="text" placeholder="Task" autofocus />
+    <button id="add-button">Add Todo</button>
+    <button id="delete-all-button">Delete All</button>
+    <div class="todos-wrapper"></div>
+    <p contenteditable="true">I am editable click me</p>
+    <script>
+      const displayDateTime = () => {
+        let now = new Date();
+        let year = now.getFullYear();
+        let month = now.getMonth() + 1;
+        let date = now.getDate();
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        if (hours < 10) {
+          hours = "0" + hours;
+        }
+        if (minutes < 10) {
+          minutes = "0" + minutes;
+        }
+
+        let dateMonthYear = date + "." + month + "." + year;
+        let time = hours + ":" + minutes;
+        let fullTime = dateMonthYear + " " + time;
+        return fullTime;
+      };
+      const randomId = () => {
+        const numbersLetters = "0123456789abcdefghijklmnopqrstuvwzyzABCDEFGHIJKLMNOPQRSTUVWXYZ".split(
+          ""
+        );
+        let randId = "";
+        let randIndex;
+        for (let i = 0; i < 6; i++) {
+          randIndex = Math.floor(Math.random() * numbersLetters.length);
+          randId += numbersLetters[randIndex];
+        }
+        return randId;
+      };
+
+      const todos = [
+        {
+          id: randomId(),
+          task: "Task 1",
+          date: displayDateTime(),
+          completed: false
+        },
+        {
+          id: randomId(),
+          task: "Task 2",
+          date: displayDateTime(),
+          completed: false
+        },
+        {
+          id: randomId(),
+          task: "Task 1",
+          date: displayDateTime(),
+          completed: false
+        }
+      ];
+      const todosWrapper = document.querySelector(".todos-wrapper");
+      const addButton = document.querySelector("#add-button");
+      const input = document.querySelector("input");
+      const deleteAllButton = document.querySelector("#delete-all-button");
+
+      const showTodos = () => {
+        todos.forEach((task, i) => {
+          let todo = document.createElement("li");
+          todo.textContent = task.task;
+
+          let date = document.createElement("span");
+          date.textContent = task.date;
+          todo.appendChild(date);
+
+          let completed = document.createElement("button");
+          completed.textContent = task.completed ? "Done" : "On Going";
+          todo.appendChild(completed);
+
+          let deleteButton = document.createElement("button");
+          deleteButton.textContent = "Delete";
+          let editButton = document.createElement("button");
+          editButton.textContent = "Edit";
+
+          todo.appendChild(editButton);
+
+          deleteButton.addEventListener("click", function() {
+            deleteTodo(i);
+          });
+          todo.appendChild(deleteButton);
+
+          todosWrapper.appendChild(todo);
+        });
+      };
+
+      const addTodo = (task) => {
+        const newTask = {
+          id: randomId(),
+          task: task,
+          date: displayDateTime(),
+          completed: false
+        };
+        if (input.value != "") {
+          todos.push(newTask);
+        }
+        showTodos();
+      };
+      const deleteTodo = (index) => {
+        todosWrapper.innerHTML = "";
+        todos.splice(index, 1);
+        showTodos();
+      };
+      const editTodo = (index, newTodo) => {
+        todos[index].task = newTodo;
+        showTodos();
+      };
+      const deleteAll = () => {
+        todos.splice(0);
+        showTodos();
+      };
+
+      deleteAllButton.addEventListener("click", () => {
+        todosWrapper.innerHTML = "";
+        deleteAll();
+      });
+
+      addButton.addEventListener("click", (event) => {
+        console.log(event.target.value);
+        // console.log(event);
+        // console.log(event.pageX);
+        // console.log('which', event.which);
+        // console.log(event.pageY);
+        todosWrapper.innerHTML = "";
+        addTodo(input.value);
+        input.value = "";
+      });
+      document.body.addEventListener("keydown", (event) => {
+        console.log(event.keyCode);
+        console.log(input.value);
+        if (event.keyCode === 13 && input.value != "") {
+          todosWrapper.innerHTML = "";
+          addTodo(input.value);
+        }
+      });
+      showTodos();
+    </script>
+  </body>
+</html>

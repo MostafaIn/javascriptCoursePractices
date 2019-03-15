@@ -54,10 +54,11 @@ console.log(company.toUpperCase());
 console.log(company.toLowerCase());
 // e. Cut(slice) out the first word of the string using slice, substr() or substring() method
 console.log(company.slice(14, 21));
-console.log(company.substr(0, 9));
-console.log(company.substring(9, 21));
+console.log(company.substr(0, 7));
+console.log(company.substring(7, 21));
 // f. Check if the string contains a word Academy using includes() method
 console.log(company.includes("Academy"));
+console.log(company.includes("academi"));
 // g. Split the string into array using split() method
 console.log(company.split());
 // h. Split the string Integrify Academy at the space using split() method
@@ -68,9 +69,10 @@ console.log(companies.split(", "));
 // j. Change Integrify Academy  to Microsoft Academy using replace() method.
 console.log(company.replace("Integrify", "Microsoft"));
 // k. What is the character at index 10  in ‘Integrify Academy’ string? User charAt()
-console.log(company.charAt(10));
+console.log(company.charAt(15));
 // l. What is the character code of A in ‘Integrify Academy’ string using charCodeAt()
 console.log(company.charCodeAt("A"));
+console.log(company.charCodeAt("a"));
 // m. Use indexOf to determine the position of  the first occurrence of e in Integrify Academy
 console.log(company.indexOf("e"));
 // n. Use lastIndexOf to determine the position of the last occurrence of e in Integrify Academy
@@ -89,16 +91,16 @@ console.log(" Integrify ".concat(" Academy "));
 console.log(company.repeat(5));
 
 /* 27. Calculate the total annual income of the person by extract the numbers from the following text.
- 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'*/
+ 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 1500 euro online courses per month.'*/
 const incomeText = "He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.".split(
   " "
 );
 console.log(incomeText);
 let salary = 5000;
 let annualBonus = 10000;
-let onlineCourses = 15000;
-let totalAnnualIncome = salary * 12 + annualBonus - onlineCourses * 12;
-console.log(totalAnnualIncome);
+let onlineCourses = 1500;
+let totalAnnualIncome = salary * 12 + annualBonus + onlineCourses * 12;
+console.log(`his annual income is ${totalAnnualIncome}$ totally.`);
 
 console.log("********** 4. BOOLEAN **********");
 ////////// 4. Boolean => Boolean value is either true or false.
@@ -305,7 +307,7 @@ if (YourAge >= 18) {
     "you are: " +
       YourAge +
       "\n You are left with " +
-      (18 - YourAge) +
+      (YourAge) +
       " years to drive."
   );
 }*/
@@ -406,13 +408,65 @@ console.log("  ***** now the items in uppercase. *****");
 console.log(itCompanies.toString() + " are big companies in the world.");
 
 // 13. Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is not found.
+function checkCo() {
+  let itCo = "Microsoft";
+  if (itCompanies.includes(itCo)) {
+    console.log(`${itCo} is exist in the list. :)`);
+  } else {
+    console.log(`${itCo} is not found in the list. :(`);
+  }
+  return itCo;
+}
+checkCo();
 
-// f. Sort the array using sort() method
-console.log(" sorted the items in accending order. => " + itCompanies.sort());
-// g. Reverse the array using reverse() method
+// 14. Filter out companies which have more than two ‘o’ without the filter method
+
+for (var o = 0; o <= itCompanies.length; o++) {
+  if (itCompanies[o].includes("oo")) {
+    console.log(itCompanies[o] + " contain oo .");
+    break;
+  } else {
+    console.log("no item match.");
+  }
+}
+
+// 15. Sort the array using sort() method
 console.log(
-  " sorted the items in deccending order. => " + itCompanies.reverse()
+  " sorted the items in ascending order(using sort()). => " + itCompanies.sort()
 );
+
+// 16. Reverse the array using reverse() method
+console.log(
+  " sorted the items in descending order(using reverse()). => " +
+    itCompanies.reverse()
+);
+
+// 17. Reverse the array without reverse() method
+for (let i = itCompanies.length - 1; i >= 0; i--) {
+  console.log(itCompanies[i]);
+}
+
+// 18. Slice out the first 3 companies from the array
+console.log(itCompanies.slice(3));
+
+// 19. Slice out the last 3 companies from the array
+console.log(itCompanies.slice(-3));
+
+// 20. Slice out the middle IT company or companies from the array
+
+// 21.Remove the first IT company from the array
+console.log(itCompanies);
+console.log(itCompanies.shift());
+console.log(itCompanies);
+
+// 22. Remove the middle IT company or companies from the array
+itCompanies.splice(middleCo);
+console.log(itCompanies);
+// 23. Remove the last IT company from the array
+itCompanies.pop();
+console.log(itCompanies);
+
+// 24. Remove all IT companies
 
 console.log("********** 11. LOOP **********");
 ////////// 11. Loop
@@ -466,17 +520,6 @@ var ITCompanies = [
 // if (!found) {
 //   console.log(firstItem + " is not found in the list :(");
 // }
-
-// e. Filter out companies which have more than two ‘o’ without the filter method
-
-for (var o = 0; o <= ITCompanies.length; o++) {
-  if (ITCompanies[o].includes("oo")) {
-    console.log(ITCompanies[o] + " contain oo .");
-    break;
-  } else {
-    console.log('no item match with "oo" .');
-  }
-}
 
 // forEach loop  *************************************************************
 console.log("********* forEach loop ********");
