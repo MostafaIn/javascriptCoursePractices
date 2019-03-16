@@ -332,6 +332,84 @@ if (your_age > my_age) {
   );
 }*/
 
+// 4. Write a code which give grade students according to theirs scores:
+// 80 - 100, A
+// 70 - 89, B
+// 60 - 69, C
+// 50 - 59, D
+// 0 - 49, F
+const score = prompt("what is your score?", "I will show your grade");
+switch (true) {
+  case score >= 0 && score <= 49:
+    console.log(`(${score}). your grade is F .`);
+    break;
+  case score >= 50 && score <= 59:
+    console.log(`(${score}). your grade is D .`);
+    break;
+  case score >= 60 && score <= 69:
+    console.log(`(${score}). your grade is C .`);
+    break;
+  case score >= 70 && score <= 89:
+    console.log(`(${score}). your grade is B .`);
+    break;
+  case score >= 90 && score <= 100:
+    console.log(`(${score}). your grade is A .`);
+    break;
+  default:
+    console.log("you do not have any grade NOW!");
+    break;
+}
+
+let car = prompt("whats your car mark?", "ford");
+switch (car) {
+  case "niisan":
+    console.log(`${car} made by Japan.`);
+    break;
+  case "ford":
+    console.log(`${car} made by USA.`);
+    break;
+  case "benz":
+    console.log(`${car} made by Germany.`);
+    break;
+
+  default:
+    console.log("I don't know!");
+    break;
+}
+
+// 5. Check if the season is Autumn, Winter, Spring or Summer. If the user input is:
+// September, October or November, the season is Autumn.
+// December, January or February, the season is Winter.
+// March, April or May, the season is Spring.
+// June, July or August, the season is Summer.
+const whichSeason = prompt("which month is now?");
+switch (whichSeason) {
+  case "September":
+  case "October":
+  case "November":
+    console.log("the season is Autumn.");
+    break;
+  case "December":
+  case "January":
+  case "February":
+    console.log("the season is Winter.");
+    break;
+  case "March":
+  case "April":
+  case "May":
+    console.log("the season is Spring.");
+    break;
+  case "June":
+  case "July":
+  case "August":
+    console.log("the season is Summer.");
+    break;
+
+  default:
+    console.log("nothing");
+    break;
+}
+
 console.log("********** 9. TERNARY OPERATOR **********");
 ////////// 9. Ternary Operator
 // let a = prompt("please enter a number: ");
@@ -447,10 +525,10 @@ for (let i = itCompanies.length - 1; i >= 0; i--) {
 }
 
 // 18. Slice out the first 3 companies from the array
-const sliceOutitCoFirst=itCompanies.slice(3);
+const sliceOutitCoFirst = itCompanies.slice(3);
 console.log(sliceOutitCoFirst);
 // 19. Slice out the last 3 companies from the array
-const sliceOutLast=itCompanies.slice(0,-3);
+const sliceOutLast = itCompanies.slice(0, -3);
 console.log(sliceOutLast);
 // 20. Slice out the middle IT company or companies from the array
 const midIdCo = itCompanies[Math.floor(itCompanies.length / 2)];
@@ -462,22 +540,20 @@ console.log(itCompanies);
 console.log(itCompanies);
 
 // 22. Remove the middle IT company or companies from the array
-var middleitCo = itCompanies[Math.floor(itCompanies.length / 2)];  
-for(let i=0; i<itCompanies.length; i++){
-    if(itCompanies[i] === middleitCo){
-      console.log(itCompanies.splice(i,1));
-      // console.log(itCompanies);
-    }
+var middleitCo = itCompanies[Math.floor(itCompanies.length / 2)];
+for (let i = 0; i < itCompanies.length; i++) {
+  if (itCompanies[i] === middleitCo) {
+    console.log(itCompanies.splice(i, 1));
+    // console.log(itCompanies);
   }
-  console.log(itCompanies);
+}
+console.log(itCompanies);
 // 23. Remove the last IT company from the array
 itCompanies.pop();
 console.log(itCompanies);
 
 // 24. Remove all IT companies
 console.log(itCompanies.splice());
-
-
 
 console.log("********** 11. LOOP **********");
 ////////// 11. Loop
