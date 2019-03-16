@@ -447,26 +447,37 @@ for (let i = itCompanies.length - 1; i >= 0; i--) {
 }
 
 // 18. Slice out the first 3 companies from the array
-console.log(itCompanies.slice(3));
-
+const sliceOutitCoFirst=itCompanies.slice(3);
+console.log(sliceOutitCoFirst);
 // 19. Slice out the last 3 companies from the array
-console.log(itCompanies.slice(-3));
-
+const sliceOutLast=itCompanies.slice(0,-3);
+console.log(sliceOutLast);
 // 20. Slice out the middle IT company or companies from the array
+const midIdCo = itCompanies[Math.floor(itCompanies.length / 2)];
+console.log(midIdCo);
 
 // 21.Remove the first IT company from the array
 console.log(itCompanies);
-console.log(itCompanies.shift());
+// console.log(itCompanies.shift());
 console.log(itCompanies);
 
 // 22. Remove the middle IT company or companies from the array
-itCompanies.splice(middleCo);
-console.log(itCompanies);
+var middleitCo = itCompanies[Math.floor(itCompanies.length / 2)];  
+for(let i=0; i<itCompanies.length; i++){
+    if(itCompanies[i] === middleitCo){
+      console.log(itCompanies.splice(i,1));
+      // console.log(itCompanies);
+    }
+  }
+  console.log(itCompanies);
 // 23. Remove the last IT company from the array
 itCompanies.pop();
 console.log(itCompanies);
 
 // 24. Remove all IT companies
+console.log(itCompanies.splice());
+
+
 
 console.log("********** 11. LOOP **********");
 ////////// 11. Loop
