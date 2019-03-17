@@ -608,6 +608,54 @@ var ITCompanies = [
 //   console.log(firstItem + " is not found in the list :(");
 // }
 
+// 3.Write a loop that makes seven calls to console.log to output the following triangle:
+for (let x = 1; x <= 7; x++) {
+  const hash = "#";
+  console.log(hash.repeat(x));
+}
+
+// 4. Iterate the array, ['HTML', 'CSS', 'JavaScript'] using a for loop and print out the items.
+const skills = ["HTML", "CSS", "JavaScript"];
+for (let i = 0; i < skills.length; i++) {
+  console.log(skills[i]);
+}
+
+// 5. Use for loop to iterate from 0 to 100 and print only even numbers
+for (let i = 0; i <= 20; i++) {
+  if (i % 2 == 0) {
+    console.log(i);
+  }
+}
+
+// 6. Use for loop to iterate from 0 to 100 and print only odd numbers
+for (let i = 0; i <= 20; i++) {
+  if (i % 2 != 0) {
+    console.log(i);
+  }
+}
+console.log("#############################################");
+
+// 7. Use for loop to iterate from 0 to 100 and print and print the sum of all numbers.
+let sum = 0;
+for (let i = 0; i <= 100; i++) {
+  sum += i;
+}
+console.log(`the sum of from 0 to 100 is = ${sum}.`);
+
+// 8. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+let sumOfEvens = 0;
+let sumOfOdds = 0;
+for (let i = 0; i <= 100; i++) {
+  if (i % 2 == 0) {
+    sumOfEvens += i;
+  } else {
+    sumOfOdds += i;
+  }
+}
+console.log(
+  `The sum of from 0 to 100. All evens is ${sumOfEvens}. and the sum of all odds is ${sumOfOdds}.`
+);
+
 // forEach loop  *************************************************************
 console.log("********* forEach loop ********");
 var pN = ["mina", "sina", "han", "me", "te", "he"];
