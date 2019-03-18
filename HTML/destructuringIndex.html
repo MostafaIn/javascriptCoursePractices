@@ -22,7 +22,7 @@
     }
     console.log(sqr(5));
 
-    //
+    // this function take some values as arguments and display total of them.
     function sum() {
       let total = 0;
       for (let i = 0; i < arguments.length; i++) {
@@ -141,6 +141,32 @@
     console.log(Nos);
     
 
+
+    ///////////////////
+    const firstNums = [1, 2, 3, 4, 5];
+      const secondNums = [6, 7, 8, 9, 10];
+      const numbers = [...firstNums, ...secondNums];
+      const nums = firstNums.concat(secondNums);
+      console.log(numbers);
+      console.log(numbers);
+      const rectangle = {
+        length: 20,
+        width: 20,
+        area: 200,
+        perimeter: 80,
+      };
+      let { length: l, width: w, area: a, perimeter: p = 60 } = rectangle;
+      console.log(l, w, a, p);
+
+      // function calculateArea(obj) {
+      //   return obj.length * obj.width;
+      // }
+      // console.log(calculateArea(rectangle));
+      function calculateArea(obj) {
+        let { length, width } = obj;
+        return length * width;
+      }
+      console.log(calculateArea(rectangle));
   </script>
 </body>
 
