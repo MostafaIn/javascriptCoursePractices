@@ -2,7 +2,7 @@ const countriesObject = [
     {
         name: "Afghanistan",
         capital: "Kabul",
-        languages: ["Pashto", "Uzbek", "Turkmen"],
+        languages: ["Pashto", "Dari"],
         population: 27657145,
         flag: "https://restcountries.eu/data/afg.svg",
         currency: "Afghan afghani"
@@ -397,6 +397,8 @@ const countriesObject = [
         languages: ["English"],
         population: 2072,
         flag: "https://restcountries...."
+    }
+];
 
 
 //Sorting Numbers
