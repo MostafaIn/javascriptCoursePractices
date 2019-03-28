@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SET and MAP</title>
+</head>
+
+<body>
+    <h1>Talk about set() and map() </h1>
+    <p>March 28 2019</p>
+    <script>
+        /*****  Set()  *****/
+        // // Sets are an object type that let you create a collection of values 
+        // that must be unique. This is useful in cases when you are faced with 
+        // potential duplicates, but only want to store a single instance of that value. 
+        // Any duplicates are ignored.
+
+        /* let companies = new Set();
+         companies.add('Facebook');
+         companies.add('Integrify');
+         companies.add('Google');
+         companies.add('Microsoft');
+         companies.add('Integrify'); // set() couldn't accept the repeated item.
+         console.log(companies);
+         console.log(companies.size);
+         companies.delete('Google');
+         console.log(companies);
+         console.log(companies.size);
+         console.log(companies.has('Google')); // because it was deleted now.
+         console.log(companies.has('Integrify')); // this element exist in the set.
+         companies.clear(); // the clear method make empty the set.
+         console.log(companies); */
+
+        const langs = ['English', 'English', 'French', 'Dari', 'Finnish', 'Russia', 'Arabic', 'Russia'];
+        let langSet = new Set(langs);
+        // for(lang of langs){
+        //     langSet.add(lang);
+        // }
+        console.log(langSet);
+        console.log(langSet.size);
+
+
+        let companies = new Set();
+        companies.add('Facebook');
+        companies.add('Integrify');
+        companies.add('Google');
+        companies.add('Microsoft');
+        console.log(companies);
+        for (company of companies) {
+            console.log(company);
+        }
+
+
+        /*****  Map()  *****/
+        // //Maps in JavaScript are an object type that allow you to store collections
+        //  in key-value pairs. You can think of how a dictionary works in the sense 
+        //  that if you want to know the definition of a word (the value), 
+        //  you only need to locate the word itself (the key).
+
+        const myMap = new Map();
+        myMap.set('Helsinki', 'Finland');
+        myMap.set('Tallin', 'Stonia');
+        myMap.set('Stokholm', 'Sweden');
+        console.log(myMap);
+        console.log(myMap.get('Helsinki'));
+        console.log(myMap.get('Stokholm'));
+        console.log(myMap.size);
+        // myMap.delete('Helsinki');
+        console.log(myMap);
+        // myMap.clear();
+        // console.log(myMap);
+        for (item of myMap) {
+            console.log(item);
+
+        }
+        ///// destructure the array
+        for (const [capital, country] of myMap) {
+            console.log(`∙ ${capital} is the capital city of ${country}.`);
+        }
+
+        // keys()
+        console.log(myMap.keys());
+        for (const capital of myMap.keys()){
+            console.log(capital);
+            
+        }
+        for (const country of myMap.values()) {
+                console.log(country);
+
+            }
+        console.log(myMap.entries());
+        const countries= myMap.entries();
+        myMap.forEach((country,index)=>{
+             console.log(`The capital city of ${country} is ${index}.`);
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>
