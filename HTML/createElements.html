@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+    </div>
+
+    <script>
+        const wrapper = document.querySelector('.wrapper');
+
+        const countries = [{ countryName: 'finland', language: 'suomi', population: 5 }, { countryName: 'Sweden', language: 'swedish', population: 12 }, { countryName: 'Denmark', language: 'Dutch', population: 8 }, { countryName: 'Norway', language: 'Norian', population: 4 }];
+
+        function createContent(country) {
+            let { countryName, language, population } = country;
+            return `<div>
+            <p>name:${countryName}</p>
+            <p>language: ${language}</p>
+            <p>population: ${population}</p>
+            </div>`;
+        };
+
+        function showCountry(arr) {
+            let content = '';
+            wrapper.innerHTML = " ";
+            arr.forEach((c, i) => {
+                content += createContent(c);
+            });
+            wrapper.innerHTML = content;
+        };
+        createContent(showCountry(countries));
+        // console.log(createContent(showCountry(countries)));    
+    </script>
+</body>
+
+</html>
