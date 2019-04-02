@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fetch API</title>
+</head>
+
+<body>
+    <h1> This lecture about fetch data in API</h1>
+
+    <script>
+        // const url = "https://restcountries.eu/rest/v2/all";
+        const url = "https://jsonplaceholder.typicode.com/posts";
+        fetch(url).then(Response => Response.json())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => console.log(error));
+
+        
+        
+    </script>
+</body>
+
+</html>
