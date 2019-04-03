@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Local Storage</title>
+</head>
+
+<body>
+    <h1>the lecture is about LOCAL STORAGE</h1>
+
+
+    <script>
+        // const skills = ['HTML', 'CSS', 'JAVASCRIPT', 'REACT'];
+        // console.log(localStorage);
+        // localStorage.setItem('name', 'Mostafa');
+        // localStorage.setItem('age', 34);
+        // localStorage.setItem('skills', skills);
+
+        // ///
+        // const person = {
+        //     name: 'mostafa',
+        //     age: 34,
+        //     skills: ['HTML', 'CSS', 'JAVASCRIPT', 'REACT']
+        // };
+        // let strigifiedPerson = JSON.stringify(person, undefined, 2);
+        // localStorage.setItem('person', strigifiedPerson);
+
+        // console.log(localStorage.getItem('person'));
+
+        // const parsedPerson = JSON.parse(localStorage.getItem('person'));
+        // console.log(parsedPerson);
+
+
+        ///Example
+        const products = {
+            name: 'laptop',
+            model: 2018,
+            description: 'macBook',
+            price: 2300,
+            accessories: ['mouse', 'keyboard', 'adapter']
+        };
+
+        const productJson = JSON.stringify(products);
+        localStorage.setItem('products', productJson);
+        console.log(localStorage.getItem('products'));
+
+        const productObj = JSON.parse(localStorage.getItem('products'));
+        console.log(productObj);
+
+        let statement = '';
+        productObj.accessories.forEach((accessory) => {
+            statement += ' ' + accessory;
+        });
+        console.log(statement);
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
