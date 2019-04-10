@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>about classes</title>
+</head>
+<body>
+    <h1>lecture about Classes in javascript</h1>
+
+    <script>
+    console.log('Lets learn about class');
+        function areaOfCircle(radius) {
+            return Math.PI * radius * radius;
+        }
+
+        class Person {
+            constructor(name, age, country = 'Finland') {
+                this.name = name;
+                this.age = age;
+                this.country = country;
+                this.point = 0;
+            }
+            getInfo() {
+                return `I am ${this.name} and I am ${this.age}. I am from ${
+                    this.country
+                    }`;
+            }
+            get increasePoint() {
+                return this.point + 1;
+            }
+            set setAge(age) {
+                this.age = age;
+            }
+        }
+
+        const personOne = new Person('Asab', 200, 'Ethiopia');
+        const personTwo = new Person('Evans', 20);
+        const personThree = new Person('Xurxe', 28, 'Spain');
+
+        console.log(personOne.getInfo);
+        console.log(personTwo.getInfo);
+        console.log(personThree.getInfo);
+        console.log(personOne);
+        console.log(personTwo);
+        console.log(personThree);
+        console.log(personOne.increasePoint);
+        personOne.setAge = 100;
+        console.log(personOne);
+
+        class Student extends Person {
+            constructor(name, age, country, skills, live) {
+                super(name, age, country);
+                this.skills = skills;
+                this.live = live;
+            }
+            getSkills() {
+                return `I have this skills ` + this.skills;
+            }
+            getInfo() {
+                return `I am ${this.name}`;
+            }
+        }
+
+        const student = new Student('Evans', 20, undefined, [
+            'HTML',
+            'CSS',
+            'JS',
+            'React',
+        ]);
+        console.log(student);
+        console.log(student.getInfo());
+        console.log(student.getSkills());
+    </script>
+</body>
+</html>
