@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>about classes</title>
 </head>
+
 <body>
     <h1>lecture about Classes in javascript</h1>
 
     <script>
-    console.log('Lets learn about class');
+        console.log('Lets learn about class');
         function areaOfCircle(radius) {
             return Math.PI * radius * radius;
         }
@@ -72,6 +74,23 @@
         console.log(student);
         console.log(student.getInfo());
         console.log(student.getSkills());
+
+        ///////
+        class User {
+            constructor(firstname, lastname, credit) {
+                this.firstname = firstname;
+                this.lastname = lastname;
+                this.credit = credit;
+            }
+            getFullName() {
+                let fullname = `my name is ${this.firstname} ${this.lastname}.and I am ${this.credit} yearsold.`;
+                return fullname;
+            }
+        }
+        let myname = new User('mostafa', 'hazareh', 34);
+        console.log(myname);
+        console.log(myname.getFullName());
     </script>
 </body>
+
 </html>

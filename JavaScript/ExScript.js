@@ -1,3 +1,4 @@
+// import evensANDoddsoddNums from 'evensANDoddsoddNums';
 /////////// Javascript Exercises
 
 console.log("********** 1. VARIABLE **********");
@@ -338,77 +339,77 @@ if (your_age > my_age) {
 // 60 - 69, C
 // 50 - 59, D
 // 0 - 49, F
-const score = prompt("what is your score?", "I will show your grade");
-switch (true) {
-  case score >= 0 && score <= 49:
-    console.log(`(${score}). your grade is F .`);
-    break;
-  case score >= 50 && score <= 59:
-    console.log(`(${score}). your grade is D .`);
-    break;
-  case score >= 60 && score <= 69:
-    console.log(`(${score}). your grade is C .`);
-    break;
-  case score >= 70 && score <= 89:
-    console.log(`(${score}). your grade is B .`);
-    break;
-  case score >= 90 && score <= 100:
-    console.log(`(${score}). your grade is A .`);
-    break;
-  default:
-    console.log("you do not have any grade NOW!");
-    break;
-}
+// const score = prompt("what is your score?", "I will show your grade");
+// switch (true) {
+//   case score >= 0 && score <= 49:
+//     console.log(`(${score}). your grade is F .`);
+//     break;
+//   case score >= 50 && score <= 59:
+//     console.log(`(${score}). your grade is D .`);
+//     break;
+//   case score >= 60 && score <= 69:
+//     console.log(`(${score}). your grade is C .`);
+//     break;
+//   case score >= 70 && score <= 89:
+//     console.log(`(${score}). your grade is B .`);
+//     break;
+//   case score >= 90 && score <= 100:
+//     console.log(`(${score}). your grade is A .`);
+//     break;
+//   default:
+//     console.log("you do not have any grade NOW!");
+//     break;
+// }
 
-let car = prompt("whats your car mark?", "ford");
-switch (car) {
-  case "niisan":
-    console.log(`${car} made by Japan.`);
-    break;
-  case "ford":
-    console.log(`${car} made by USA.`);
-    break;
-  case "benz":
-    console.log(`${car} made by Germany.`);
-    break;
+// let car = prompt("whats your car mark?", "ford");
+// switch (car) {
+//   case "niisan":
+//     console.log(`${car} made by Japan.`);
+//     break;
+//   case "ford":
+//     console.log(`${car} made by USA.`);
+//     break;
+//   case "benz":
+//     console.log(`${car} made by Germany.`);
+//     break;
 
-  default:
-    console.log("I don't know!");
-    break;
-}
+//   default:
+//     console.log("I don't know!");
+//     break;
+// }
 
 // 5. Check if the season is Autumn, Winter, Spring or Summer. If the user input is:
 // September, October or November, the season is Autumn.
 // December, January or February, the season is Winter.
 // March, April or May, the season is Spring.
 // June, July or August, the season is Summer.
-const whichSeason = prompt("which month is now?");
-switch (whichSeason) {
-  case "September":
-  case "October":
-  case "November":
-    console.log("the season is Autumn.");
-    break;
-  case "December":
-  case "January":
-  case "February":
-    console.log("the season is Winter.");
-    break;
-  case "March":
-  case "April":
-  case "May":
-    console.log("the season is Spring.");
-    break;
-  case "June":
-  case "July":
-  case "August":
-    console.log("the season is Summer.");
-    break;
+// const whichSeason = prompt("which month is now?");
+// switch (whichSeason) {
+//   case "September":
+//   case "October":
+//   case "November":
+//     console.log("the season is Autumn.");
+//     break;
+//   case "December":
+//   case "January":
+//   case "February":
+//     console.log("the season is Winter.");
+//     break;
+//   case "March":
+//   case "April":
+//   case "May":
+//     console.log("the season is Spring.");
+//     break;
+//   case "June":
+//   case "July":
+//   case "August":
+//     console.log("the season is Summer.");
+//     break;
 
-  default:
-    console.log("nothing");
-    break;
-}
+//   default:
+//     console.log("nothing");
+//     break;
+// }
 
 console.log("********** 9. TERNARY OPERATOR **********");
 ////////// 9. Ternary Operator
@@ -516,7 +517,7 @@ console.log(
 // 16. Reverse the array using reverse() method
 console.log(
   " sorted the items in descending order(using reverse()). => " +
-    itCompanies.reverse()
+  itCompanies.reverse()
 );
 
 // 17. Reverse the array without reverse() method
@@ -772,14 +773,26 @@ function CalObjSpeed(DistanceTotal, TimeTotal) {
 }
 console.log(
   "The object moves 150m within 10s. the speed is =  " +
-    CalObjSpeed(150, 10) +
-    "m/s"
+  CalObjSpeed(150, 10) +
+  "m/s"
 );
 console.log(
   "The object moves 300m within 25s. the speed is =  " +
-    CalObjSpeed(300, 25) +
-    "m/s"
+  CalObjSpeed(300, 25) +
+  "m/s"
 );
+
+
+// 11. Weight of a substance is calculated as follows: weight = mass x gravity. Write a function which calculates weight.
+function CalWeight(mass, gravity) {
+  var weight = mass * gravity;
+  return weight;
+}
+console.log("The weight of this substance is = " + CalWeight(23, 12) + "kg");
+console.log("The weight of this substance is = " + CalWeight(24, 13) + "kg");
+console.log("The weight of this substance is = " + CalWeight(25, 14) + "kg");
+
+
 
 /* 12. Temperature in ˚C can be converted to ˚F using this formula: ˚F = (˚C x 9 / 5) + 32. Write a function 
 which convert ˚C to ˚F convertCelsiusToFahrenheit. */
@@ -803,18 +816,18 @@ function ConvertFahrenheitToCelsius(F) {
 }
 console.log(
   "the 55 ˚F is equal to " +
-    ConvertFahrenheitToCelsius(55.4).toFixed(0) +
-    "˚C ."
+  ConvertFahrenheitToCelsius(55.4).toFixed(0) +
+  "˚C ."
 );
 console.log(
   "the 55 ˚F is equal to " +
-    ConvertFahrenheitToCelsius(73.4).toFixed(0) +
-    "˚C ."
+  ConvertFahrenheitToCelsius(73.4).toFixed(0) +
+  "˚C ."
 );
 console.log(
   "the 55 ˚F is equal to " +
-    ConvertFahrenheitToCelsius(8.59).toFixed(0) +
-    "˚C ."
+  ConvertFahrenheitToCelsius(8.59).toFixed(0) +
+  "˚C ."
 );
 
 // 13. Body mass index(BMI) is calculated as follows: bmi = weight in Kg / (height x height) in m2. Write a function which calculates bmi.
@@ -848,14 +861,14 @@ function CalBMI(weight, height) {
   } else if (bmi >= 18.5 && bmi <= 24.9) {
     console.log(
       "your BMI is = " +
-        bmi.toFixed(2) +
-        ".  👍 Normal weight: BMI is 18.5 to 24.9"
+      bmi.toFixed(2) +
+      ".  👍 Normal weight: BMI is 18.5 to 24.9"
     );
   } else {
     console.log(
       "your BMI is = " +
-        bmi.toFixed(2) +
-        ".  Underweight: BMI is less than 18.5"
+      bmi.toFixed(2) +
+      ".  Underweight: BMI is less than 18.5"
     );
   }
   return bmi;
@@ -989,26 +1002,109 @@ console.log(addItems(ITCompanies, "YLE"));
 console.log(addItems(ITCompanies, "Samsung"));
 
 // 23. Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
-const Arr = [12, 13, 14, 15, 16, 17, 18, 19, 20];
-function removeItem(array, index) {
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === index) {
-      Arr.splice(i, 1);
+const ArrNo = [12, 13, 14, 15, 16, 17, 18, 19, 20];
+console.log(ArrNo.splice(4, 2, 41));// in this 4 is index, 2 the number of items and 41 is the value push ensteed in the array
+console.log(ArrNo);
+function removeItem1(index) {
+  let r = ArrNo.splice(index, 1);
+  return r;
+}
+console.log(removeItem1(-2));
+console.log(ArrNo);
+
+// 24. Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
+function sumOfNumbers1(num1, num2, num3, num4, num5) {
+  var sum = num1 + num2 + num3 + num4 + num5;
+  return sum;
+}
+console.log(sumOfNumbers1(12, 12, 26, 50, 12));
+
+// add all the items of an arry.
+var s = [12, 13, 26, 50, 102, 202, 33, 7, 22, 8, 61, 1].reduce(adds);
+function adds(a, b) {
+  return a + b;
+}
+console.log(s);
+
+// 25. & 26. Declare a function name sumOfOdds & sumOf Evens. It takes a number parameter and it adds all the odd numbers in that - range.
+function sumOfNumbers() {
+  var someNum = [23, 34, 45, 56, 67, 78, 90, 43, 76, 8];
+  var OddsSum = 0;
+  var EvensSum = 0;
+  for (i = 0; i <= someNum.length - 1; i++) {
+    if (someNum[i] % 2 == 0) {
+      EvensSum += someNum[i];
+      console.log(someNum[i] + " is even.");
+    } else {
+      OddsSum += someNum[i];
+      console.log(someNum[i] + " is odd.");
     }
   }
-  return Arr;
+  return { SumofEvenNumbers: EvensSum, SumofOddNumbers: OddsSum };
 }
-console.log(removeItem(Arr, 4));
-console.log(Arr);
+console.log(sumOfNumbers());
 
-// 11. Weight of a substance is calculated as follows: weight = mass x gravity. Write a function which calculates weight.
-function CalWeight(mass, gravity) {
-  var weight = mass * gravity;
-  return weight;
+
+/***  Declare a function name someNums. It takes a number parameter and it recognize that the number is ODD or EVEN then push it to the array,
+then reduce the numbers of this array with the help of another function name sumOfArr. */
+let oddNums = [];
+let evenNums = [];
+function someNums(number) {
+  if (number % 2 == 0) {
+    console.log(number + ' is even.');
+    evenNums.push(number);
+  } else {
+    console.log(number + ' is odd.');
+    oddNums.push(number);
+  }
 }
-console.log("The weight of this substance is = " + CalWeight(23, 12) + "kg");
-console.log("The weight of this substance is = " + CalWeight(24, 13) + "kg");
-console.log("The weight of this substance is = " + CalWeight(25, 14) + "kg");
+function sumOfArr(arr) {
+  return arr.reduce((a, b) => a + b);
+}
+// 27.Declare a function name evensAndOdds.It takes a positive integer as parameter and it counts number of evens and odds in the number.
+function evensANDodds(countsNums) {
+  return countsNums.length;
+}
+console.log(someNums(3));
+console.log(someNums(2));
+console.log(someNums(8));
+console.log(someNums(9));
+console.log(someNums(5));
+console.log(someNums(1));
+console.log(someNums(4));
+console.log(someNums(6));
+console.log(someNums(7));
+console.log(oddNums);
+console.log(evensANDodds(oddNums) + ' odd numbers are available in the list.');
+console.log(evenNums);
+console.log(evensANDodds(evenNums) + ' even numbers are available in the list.');
+console.log(sumOfArr(oddNums));
+console.log(sumOfArr(evenNums))
+
+
+// 28. Write a funcition which takes any number of arguments and return the sum of the arguments
+function sumTo(n) {
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    sum += i;
+  }
+  return sum;
+}
+console.log(sumTo(4));
+console.log(sumTo(50));
+
+
+// 29. Writ a function which generates a randomUserIP.
+function randomUserIP() {
+  return Math.floor(Math.random() * 10);
+}
+console.log(randomUserIP());
+console.log(randomUserIP());
+console.log(randomUserIP());
+console.log(randomUserIP());
+
+
+
 
 // d.  Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
 var cars = ["toyota", "mazda", "BMW", "benz", "nissan", "ford"];
@@ -1031,47 +1127,21 @@ removeItem(cars.splice(0, 2));
 console.log(cars);
 
 // h. Declare a function name addItem. It returns array after adding an item
-function addItem(cars) {
-  return cars;
+let carsList = [];
+function addCarItem(mycar) {
+  return carsList.push(mycar);
 }
-addItem(cars.push("skuda"));
-addItem(cars.push("chevrolet"));
-console.log(cars);
-addItem(cars.push("tiida"));
-console.log(cars);
+console.log(addCarItem("skuda"));
+console.log(addCarItem("chevrolate"));
+console.log(carsList);
+console.log(addCarItem("tiida"));
+console.log(carsList);
 
-// i. Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
 
-function sumOfNumbers(num1, num2, num3, num4, num5) {
-  var sum = num1 + num2 + num3 + num4 + num5;
-  return sum;
-}
-console.log(sumOfNumbers(12, 12, 26, 50, 12));
 
-// add all the items of an arry.
-var s = [12, 13, 26, 50, 102, 202, 33, 7, 22, 8, 61, 1].reduce(adds);
-function adds(a, b) {
-  return a + b;
-}
-console.log(s);
 
-// j. & k. Declare a function name sumOfOdds & sumOf Evens. It takes a number parameter and it adds all the odd numbers in that - range.
-function sumOfNumbers() {
-  var someNum = [23, 34, 45, 56, 67, 78, 90, 43, 76, 8];
-  var OddsSum = 0;
-  var EvensSum = 0;
-  for (i = 0; i <= someNum.length - 1; i++) {
-    if (someNum[i] % 2 == 0) {
-      EvensSum += someNum[i];
-      console.log(someNum[i] + " is even.");
-    } else {
-      OddsSum += someNum[i];
-      console.log(someNum[i] + " is odd.");
-    }
-  }
-  return { SumofEvenNumbers: EvensSum, SumofOddNumbers: OddsSum };
-}
-console.log(sumOfNumbers());
+
+
 
 // 20. Declare a function name . It takes a number parameter and it counts number of evens and odds in the - number. output:
 console.log("*********************");
