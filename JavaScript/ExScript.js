@@ -1083,25 +1083,122 @@ console.log(sumOfArr(evenNums))
 
 
 // 28. Write a funcition which takes any number of arguments and return the sum of the arguments
-function sumTo(n) {
+function sumTo(n) {// this function calculate the sum of n numbers.
   let sum = 0;
   for (let i = 0; i <= n; i++) {
     sum += i;
   }
   return sum;
 }
-console.log(sumTo(4));
+console.log(sumTo(6));
 console.log(sumTo(50));
+
+function sumToEvens(n) {// this function calculate the sum of evens of n numbers.
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    if (i % 2 === 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+console.log(sumToEvens(8));
+console.log(sumToEvens(5));
+
+function sumToOdds(n) {// this function calculate the sum of evens of n numbers.
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    if (i % 2 !== 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+console.log(sumToOdds(9));
+console.log(sumToOdds(6));
 
 
 // 29. Writ a function which generates a randomUserIP.
-function randomUserIP() {
-  return Math.floor(Math.random() * 10);
+
+
+// 30. Write a function which generates a randomMacAddress.
+
+
+/* 31. Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number.
+ The function return the hexadecimal number. */
+function randomHexaNumberGenerator() {
+  let r = Math.floor(Math.random() * 256).toString(16);
+  let g = Math.floor(Math.random() * 256).toString(16);
+  let b = Math.floor(Math.random() * 256).toString(16);
+  r = (r.length === 2) ? r : '0' + r;
+  g = (g.length === 2) ? g : '0' + g;
+  b = (b.length === 2) ? b : '0' + b;
+  return `#${r}${g}${b}`;
 }
-console.log(randomUserIP());
-console.log(randomUserIP());
-console.log(randomUserIP());
-console.log(randomUserIP());
+console.log(randomHexaNumberGenerator());
+
+
+function randomRGBcolorGenerator() {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  let color = `rgb(${r},${g},${b})`;
+  return color;
+}
+console.log(randomRGBcolorGenerator());
+
+
+// 32. Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+function userIdGenerator(l) {
+  let charList = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  let id = '';
+  for (let i = 0; i < l; i++) {
+    id += charList.charAt(Math.floor(Math.random() * charList.length));
+  }
+  return id;
+}
+console.log(userIdGenerator(7));
+
+function finNumberPlate() { // this function generate the sample of finnish car numberplate randomly.
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const numbers = "0123456789";
+  let l = '';
+  let n = '';
+  for (let i = 0; i < 3; i++) {
+    l += letters.charAt(Math.floor(Math.random() * letters.length));
+    n += numbers.charAt(Math.floor(Math.random() * numbers.length));
+  }
+  // for (let i = 0; i < 3; i++) {
+  //   n += numbers.charAt(Math.floor(Math.random() * numbers.length));
+  // }
+  let numberPlate = `${l} - ${n}`;
+  return numberPlate;
+}
+console.log(finNumberPlate());
+
+
+//33. Modify question number n . Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated.
+let numberOfChars = 4;
+let numberOfIds = 2;
+function userIdGeneratedByUser(chars, ids) {
+  const characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  let userId = '';
+  let userIdList = [];
+  for (let i = 0; i < chars; i++) {
+    userId += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  for (let i = 0; i < ids; i++) {
+    userIdList.push(userId);
+  }
+  return userIdList;
+}
+console.log(userIdGeneratedByUser(numberOfChars, numberOfIds));
+
+
+
+
+
+
 
 
 
